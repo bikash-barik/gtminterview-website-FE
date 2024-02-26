@@ -1,0 +1,377 @@
+.lay {
+  padding: 0 2vw;
+}
+
+.header {
+  height: 47px;
+  background: #082244;
+  display: flex;
+  color: #fff;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.typho-1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.logo {
+  width: 150px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* home.js css start */
+.containerr {
+  height: 500px;
+  background: #0a1131;
+  display: flex;
+}
+
+.containerr .c-lite-1 Button {
+  font-weight: 700;
+  background-color: #2D7E9F;
+  border-radius: 0px 0px 0px 0px;
+  margin-top: 60px;
+}
+
+.c-lite-1 {
+  color: #fff;
+  padding: 80px;
+}
+/* box css start */
+.on {
+  margin-top: 48px !important;
+  font-size: 31px !important;
+  text-align: center;
+  font-weight: 600 !important;
+  margin-bottom: 31px !important;
+}
+
+.box {
+  display: flex;
+  gap: 10px;
+}
+
+.box-content {
+  height: 345px;
+  width: 418px;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  display: flex;
+  cursor: pointer;
+}
+
+/* .box:hover .box-content {
+  transform: rotateY(180deg);
+} */
+.active_hover:hover{
+  transform: rotateY(180deg);
+  transition-duration: 1.5s;
+
+}
+
+.active_hover:hover .box-back p {
+  transform: rotateY(180deg);
+  transition-duration: 1.5s;
+
+}
+
+.box:hover .box-front {
+  z-index: -1;
+}
+
+.box-front,
+.box-back {
+  height: 345px;
+  padding: 30px;
+  color: #ddd;
+  position: absolute;
+}
+
+.box-front h3 {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.box-front p {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.box-front img {
+  position: relative;
+  left: 115px;
+  width: 109px;
+}
+
+.box-front {
+  background: #1064b7;
+  z-index: 100;
+}
+
+.box-back {
+  background: #0988bb;
+
+}
+
+.box-content .front {
+  background: #0988bb !important;
+}
+
+.box-content .back {
+  background: #1064b7 !important;
+}
+
+.box-back p {
+  text-align: center;
+  position: relative;
+  top: 102px;
+}
+/* box css end */
+
+.container-2 {
+  background: #f8f8f8;
+  margin: 30px 0px;
+  padding: 42px;
+  display: flex;
+}
+
+/* .container-2 .c-left{
+  opacity: 0;
+  animation: slideRight Is ease forwards;
+  animation-delay: 1s;
+} */
+.container-2 h3 {
+  color: rgb(11, 158, 218);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.c-left p {
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 25px;
+}
+
+.c-left h2 {
+  color: #171717;
+  font-family: "Nunito", Sans-serif;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.c-left .btn {
+  border-radius: 39px;
+}
+
+.container-3 {
+  text-align: center;
+}
+
+.container-3 h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: deepskyblue;
+}
+
+.container-4 {
+  background: #f8f8f8;
+  margin-top: 40px;
+}
+
+.container-4 .c-top {
+  text-align: center;
+  padding: 13px
+}
+
+.container-4 h6 {
+  font-weight: 600;
+  color: deepskyblue;
+}
+
+.card-container {
+  display: flex;
+  gap: 75px;
+  border-radius: 10px;
+}
+
+.card-container .left-card {
+  height: 100px;
+  width: 40%;
+  margin-left: 53px;
+  box-shadow: 1px 2px 8px 0 #ccc;
+}
+
+.card-container .right-card {
+  height: 100px;
+  width: 40%;
+  margin-left: 53px;
+  box-shadow: 1px 2px 8px 0 #ccc;
+}
+
+.card-container .left-card {
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.card-container .right-card {
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+/* banner image start */
+.banner-image {
+  margin-top: 40px;
+  min-height: 300px;
+  background-image: url(./assets/images/gtm14.png);
+}
+
+.banner-image h3 {
+  color: #fff;
+  font-family: "Nunito", Sans-serif;
+  letter-spacing: 1px;
+}
+
+.b-i-s {
+  padding: 134px;
+  text-align: center;
+}
+
+.b-i-s .btn-1 {
+  border-radius: 39px;
+  background: #f4c81f;
+  margin-top: 13px;
+}
+
+/* banner image end */
+
+/* key frame animation start */
+/* @keyframes slideRight{
+  0%{
+    transform:translate(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform:translate(0);
+    opacity: 1;
+  }
+} */
+/* key frame animation end */
+
+/* footer css start */
+.box-2 {
+  background-color: #0b3155;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.g-f {
+  margin: 15px;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  margin-top: 18px !important;
+}
+
+
+.icon-section {
+  display: flex;
+  gap: 15px;
+  color: #fff;
+  margin-top: 40px !important;
+}
+
+.second-footer {
+  background-color: #0b3155;
+  width: 100%;
+  display: flex;
+  gap: 166px;
+  padding: 60px;
+}
+
+.footer-right {
+  margin-left: -32px;
+  margin-top: 29px;
+}
+
+/* footer css end */
+
+/* commerce css start */
+.commerce{
+  height: 122px;
+  border: 1px solid red;
+  margin-top: 30px;
+  
+}
+.g-b{
+  height: 100px;
+  border: 1px solid black;
+
+}
+.grid-c{
+  gap: 143px;
+}
+/* commerce css end */
+
+/* form css start */
+.form-d {
+  background: linear-gradient(359deg, #fff, skyblue);
+  height: 400px;
+  margin-top: 19px;
+  border-radius: 10px;
+}
+.form-d h3 {
+  position: relative;
+  left:77px;
+  top: 27px;
+  display: inline-block;
+}
+
+.flex-form {
+  display: flex;
+  padding: 79px;
+  gap: 182px;
+}
+.add{
+  display: flex;
+  gap: 10px;
+}
+.fast-box{
+  padding: 20px 20px 20px 20px;
+  background-color: #FFFFFF;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
+  gap: 10px;
+  position: relative;
+  bottom: 74px;
+  height: 145px;
+  width: 373px;
+}
+.second-box{
+  height: 113px;
+  width: 373px;
+  padding: 20px 20px 20px 20px;
+  background-color: #FFFFFF;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
+  gap: 10px;
+  position: relative;
+  bottom: 63px;
+  margin-top: 10px;
+}
+
+/* form css end */
