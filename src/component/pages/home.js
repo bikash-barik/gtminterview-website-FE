@@ -58,22 +58,30 @@ const Home = () => {
     const [hov, setHov] = useState(null)
     return (
         <Box className='lay'>
-            <Box className='containerr'>
+
+            <div className='homediv'>
+            <Box className='containerr homerow'>
+                <div className='homecolumn1'>
                 <div className='c-lite-1'>
                     <h6 style={{ fontSize: "45px" }}>{typeEffect} <Cursor /></h6>
                     <Typography style={{ marginTop: "26px" }}>Bring both tangible and Intangible business metrics to the table to beat the odds.</Typography>
                     <Button variant="contained">CONTACT US<ChevronRightIcon /><ChevronRightIcon /></Button>
                 </div>
-                <div>
-                    <img style={{ height: "384px", marginTop: "18px" }} src={logo} alt='logo' />
+                </div>
+               
+                <div className='homecolumn2'>
+                    <img style={{ height: "384px", marginTop: "18px" }} src="https://glowtechmor.com/wp-content/uploads/2022/12/dribbble-animation-1.gif" alt='logo' />
                 </div>
             </Box>
+            </div>
+
             <div>
                 <Typography className='on'>On-Demand Services</Typography>
             </div>
-            <div className='box'  data-aos="zoom-in-up">
+            <div className='servicediv'>
+            <div className='box' data-aos="zoom-in-up">
                 {card.map((e) => (
-                    <div onMouseEnter={() => setHov(e)} className={` box-content ${hov === e && 'active_hover'}`} key={e.id}>
+                    <div key={e.id} onMouseEnter={() => setHov(e)} className={` box-content ${hov === e && 'active_hover'}`} >
                               
                         <div className='box-front'>
                             <img src={e.image} alt='logoo' />
@@ -87,7 +95,10 @@ const Home = () => {
                 ))}
 
             </div>
-            <div className='container-2'>
+            </div>
+           
+           <div className='whowearediv'>
+           <div className='container-2'>
                 <div className='c-left' data-aos="fade-right">
                     <h3>Who we are</h3>
                     <h2>Holistic & Innovative Solutions For Your Business Needs​</h2>
@@ -102,20 +113,38 @@ const Home = () => {
                     <img src={logo5} alt='logo5' />
                 </div>
             </div>
+           </div>
+            
+
             <div className='container-3'>
                 <h5>HOW WE WORK!</h5>
                 <h2>OUR WORKING PROCESS</h2>
             </div>
             <div className='img-section'>
-                <img style={{ width: "100%" }} src={logo6} alt='logo6' />
+                <img style={{ width: "90%", height:"50vh" }} src={logo6} alt='logo6' />
             </div>
+
             <div className='container-4'>
                 <div className='c-top' data-aos="zoom-in">
                     <h6>DATA DRIVEN</h6>
                     <h2 style={{ fontWeight: "600" }}>OUR CORE VALUES</h2>
                 </div>
                 {/* mapping karna he card container ko */}
+                
                 <div className='card-container'>
+
+                    <div className='leftcardcontainer'>
+                     <div className='left-card' >
+
+                        <div className='left-card-1'>
+                            <img style={{ width: "100px" }} src={logo7} alt='logo7' />
+                        </div>
+                        <div>
+                            <h5 style={{ marginTop: "8px" }}>Business Goal</h5>
+                            <Typography>Dynamic content brand voice council tweens sticky content responsive ROI.</Typography>
+                        </div>
+                    </div>
+
                     <div className='left-card' >
                         <div className='left-card-1'>
                             <img style={{ width: "100px" }} src={logo7} alt='logo7' />
@@ -124,9 +153,13 @@ const Home = () => {
                             <h5 style={{ marginTop: "8px" }}>Business Goal</h5>
                             <Typography>Dynamic content brand voice council tweens sticky content responsive ROI.</Typography>
                         </div>
-
                     </div>
-                    <div className='right-card'>
+                    
+                    </div>
+
+                   <div className='leftcardcontainer'>
+
+                   <div className='right-card'>
                         <div>
                             <img style={{ width: "100px" }} src={logo8} alt='logo8' />
                         </div>
@@ -136,6 +169,8 @@ const Home = () => {
                         </div>
 
                     </div>
+                   </div>
+                   
                 </div>
             </div>
             <div className='banner-image'>
@@ -169,6 +204,7 @@ const Home = () => {
                         </div>
                         <button style={{ width: "100%" }} type="submit" className="btn btn-primary">SUBMIT FORM</button>
                     </div>
+                    
                     <div className='boxes'>
                         <div className='fast-box'>
 

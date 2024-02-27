@@ -1,0 +1,16 @@
+.header{
+    padding: 0 20px;
+}
+
+.navbardiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbarul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

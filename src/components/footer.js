@@ -13,7 +13,8 @@ import sky1 from '../assets/images/gtm17.png';
 const Footer = () => {
     return (
         <>
-            <Container className="box-2">
+        <div className='footerdiv'> 
+        <Container className="box-2">
                 <Grid container >
                     <Grid item xs={12} sm={6} md={4} lg={3}>
                         <img style={{ width: "170px", marginTop: "10px" }} src={sky} alt='logo' />
@@ -49,6 +50,8 @@ const Footer = () => {
                     </div>
                 </Box> 
             </Container>
+        </div>
+            
         </>
     )
 }
