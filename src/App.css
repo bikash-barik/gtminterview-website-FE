@@ -1,5 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .lay {
   padding: 0;
+}
+
+.navbar{
+  box-shadow: 0px 0px 10px 0px rgba(160.93125915527344, 160.93125915527344, 160.93125915527344, 0.5);
+  z-index: 2;
 }
 
 .header {
@@ -16,6 +27,7 @@
   align-items: center;
   gap: 10px;
   font-weight: 600;
+  /* width: 100%; */
 }
 
 .logo {
@@ -30,9 +42,10 @@
 
 /* home.js css start */
 .containerr {
-  height: 500px;
+  /* height: 500px; */
   background: #0a1131;
   display: flex;
+  padding: 50px 0;
 }
 
 .containerr .c-lite-1 Button {
@@ -71,6 +84,7 @@
 .box {
   display: flex;
   gap: 10px;
+  padding: 20px 0;
 }
 
 .box-content {
@@ -90,6 +104,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.whowearediv{
+  background: #f8f8f8;
 }
 
 .active_hover:hover{
@@ -158,10 +176,11 @@
 /* box css end */
 
 .container-2 {
-  background: #f8f8f8;
   margin: 30px 0px;
-  padding: 42px 60px;
+  padding: 42px 0;
   display: flex;
+  width: 80%;
+  gap: 30px;
 }
 
 /* .container-2 .c-left{
@@ -194,8 +213,14 @@
   border-radius: 39px;
 }
 
+.c-right-img{
+  width: 100%;
+  /* height: 400px; */
+}
+
 .container-3 {
   text-align: center;
+  padding: 30px;
 }
 
 
@@ -281,6 +306,8 @@
   margin-top: 13px;
 }
 
+
+
 /* banner image end */
 
 /* key frame animation start */
@@ -329,7 +356,7 @@
   width: 100%;
   display: flex;
   gap: 166px;
-  padding: 30px 60px;
+  padding: 30px;
 }
 
 .footer-right {
@@ -411,3 +438,60 @@
 }
 
 /* form css end */
+
+@media screen and (max-width:600px) {
+  .containerr{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .box{
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .box-front{
+    padding: 0;
+    width: 100%;
+  }
+
+  .container-2{
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .b-i-s{
+    padding: 50px;
+  }
+
+  .flex-form{
+    flex-direction: column;
+  }
+
+  .form-d h3{
+    left: 10px;
+  }
+
+  .card-container{
+    flex-direction: column;
+  }
+
+  .card-container{
+    gap: 10px;
+  }
+
+  .leftcardcontainer {
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  .second-footer{
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .footer-right{
+    margin-left: 0;
+  }
+}

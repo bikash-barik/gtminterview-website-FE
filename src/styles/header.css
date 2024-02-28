@@ -14,3 +14,13 @@
     justify-content: center;
 }
 
+
+@media screen and (max-width:600px) {
+    .header{
+        padding: 0 2px;
+        gap: 5px;
+    }
+    .typho-1 {
+        font-weight: 500;
+    }
+}

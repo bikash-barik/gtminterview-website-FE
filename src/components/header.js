@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 import HeadsetIcon from '@mui/icons-material/Headset';
 import EmailIcon from '@mui/icons-material/Email';
+
 import logo from "../assets/images/gtm-1.png"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from 'react-router-dom';
@@ -29,7 +30,7 @@ const Header = () => {
               <a className="nav-link link">SERVICES<KeyboardArrowDownIcon/></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link link">OUR PRODUCTS<KeyboardArrowDownIcon/></a>
+              <Link to="/our-products" className="nav-link link">OUR PRODUCTS<KeyboardArrowDownIcon/></Link>
             </li>
             <li className="nav-item">
               <a className="nav-link link ">CONTACT US</a>
@@ -41,7 +42,7 @@ const Header = () => {
           </div>
           
           <form className="form-inline my-2 my-lg-0">
-            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+            <input className="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search" />
             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>

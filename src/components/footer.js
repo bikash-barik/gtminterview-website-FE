@@ -20,7 +20,7 @@ const Footer = () => {
                         <img style={{ width: "170px", marginTop: "10px" }} src={sky} alt='logo' />
                     </Grid>
                     <Grid item xs={12} sm={6} md={4} lg={3}>
-                        <Typography style={{ margin: "15px", fontSize: "14px", color: "#fff",display:"flex",gap:"10px" }}> < LocationOnIcon />WeWork Prestige Cube Koramangala, Site No. 26, Laskar Hosur Road, Adugodi, Bangalore, KA 560029</Typography>
+                        <Typography style={{fontSize: "14px", color: "#fff",display:"flex",gap:"10px",marginTop:"20px" }}> < LocationOnIcon />WeWork Prestige Cube Koramangala, Site No. 26, Laskar Hosur Road, Adugodi, Bangalore, KA 560029</Typography>
                     </Grid>
                     <Grid item xs={12} sm={6} md={4} lg={3}>
                         <Typography className='g-f'><EmailIcon /> info@glowtechmor.com </Typography>
@@ -45,8 +45,8 @@ const Footer = () => {
                         <Typography style={{color:"#fff",marginTop:"12px"}}>© Glowtechmor. All rights reserved.</Typography>
                     </div>
                     <div className='footer-left'>
-                        <Typography style={{color:"#fff",marginLeft:"59px"}}>For inquiries :info@glowtechmor.com</Typography>
-                        <img style={{width:"400px"}}src={sky1} alt='sky1' />
+                        <Typography style={{color:"#fff"}}>For inquiries :info@glowtechmor.com</Typography>
+                        <img style={{width:"100%"}}src={sky1} alt='sky1' />
                     </div>
                 </Box> 
             </Container>

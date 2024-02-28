@@ -2,7 +2,7 @@ import { Box, Button, Container, Grid, TextField, Typography,container } from '@
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import React, { useState } from 'react'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import logo from '../../assets/images/gtm-2.png'
+// import logo from '../../assets/images/gtm-2.png'
 import logoo from '../../assets/images/gtm3.png'
 import logooo from '../../assets/images/gtm4.png'
 import logoooo from '../../assets/images/gtm5.png'
@@ -10,12 +10,12 @@ import logo5 from '../../assets/images/gtm6.png'
 import logo6 from '../../assets/images/gtm7.png'
 import logo7 from '../../assets/images/gtm8.png'
 import logo8 from '../../assets/images/gtm9.png'
-import logo9 from '../../assets/images/gtm10.png'
-import logo10 from '../../assets/images/gtm11.png'
-import logo11 from '../../assets/images/gtm12.png'
-import logo12 from '../../assets/images/gtm13.png'
-import logo13 from '../../assets/images/gtm14.png'
-import logo14 from '../../assets/images/e.png'
+// import logo9 from '../../assets/images/gtm10.png'
+// import logo10 from '../../assets/images/gtm11.png'
+// import logo11 from '../../assets/images/gtm12.png'
+// import logo12 from '../../assets/images/gtm13.png'
+// import logo13 from '../../assets/images/gtm14.png'
+// import logo14 from '../../assets/images/e.png'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -60,7 +60,7 @@ const Home = () => {
         <Box className='lay'>
 
             <div className='homediv'>
-            <Box className='containerr homerow'>
+            <Box className='containerr'>
                 <div className='homecolumn1'>
                 <div className='c-lite-1'>
                     <h6 style={{ fontSize: "45px" }}>{typeEffect} <Cursor /></h6>
@@ -70,7 +70,7 @@ const Home = () => {
                 </div>
                
                 <div className='homecolumn2'>
-                    <img style={{ height: "384px", marginTop: "18px" }} src="https://glowtechmor.com/wp-content/uploads/2022/12/dribbble-animation-1.gif" alt='logo' />
+                    <img style={{ height: "384px",width:"100%", marginTop: "18px" }} src="https://glowtechmor.com/wp-content/uploads/2022/12/dribbble-animation-1.gif" alt='logo' />
                 </div>
             </Box>
             </div>
@@ -110,7 +110,7 @@ const Home = () => {
                     <Button className='btn' variant="contained">Get Free Quote<ChevronRightIcon /></Button>
                 </div>
                 <div className='c-right' data-aos="fade-left">
-                    <img src={logo5} alt='logo5' />
+                    <img className='c-right-img' src={logo5} alt='logo5' />
                 </div>
             </div>
            </div>
