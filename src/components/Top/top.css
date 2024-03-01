@@ -1,0 +1,43 @@
+.topsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toprow1{
+    background-image: url(../../assets/images/workers-considering-term-agreement_1098-1517.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15vh;
+    z-index: 1;
+    position: relative;
+}
+
+.toprow1::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 15vh;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.topheadingdiv{
+    width: 70%;
+}
+
+.topheading{
+    color: white;
+    padding-left: 15px;
+    border-left: 5px solid white;
+    text-transform: uppercase;
+}

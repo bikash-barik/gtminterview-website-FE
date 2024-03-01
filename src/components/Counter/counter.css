@@ -1,0 +1,23 @@
+.countersection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--e-global-color-fe4ec32);
+    padding: 15px 0;
+}
+
+.counterrow{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 85%;
+}
+
+.countercolumn{
+    text-align: center;
+    color: white;
+    border-right: 2px solid white;
+}
+
+.countercolumnheading{
+    font-size: 3rem;
+}

@@ -1,0 +1,42 @@
+.overviewsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.overviewrow1{
+    width: 85%;
+    text-align: center;
+}
+
+.overviewrow2{
+    width: 85%;
+    text-align: justify;
+    padding: 20px 0;
+}
+
+.overviewspan{
+    font-weight: 400;
+}
+
+.overviewrowpara,.overviewcolumnpara{
+    color: var(--e-global-color-fd86af4);
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.overviewrow2innerdiv{
+    display: flex;
+}
+
+.overviewrow2column1{
+    width: 50%;
+}
+
+.overviewcolumnimage{
+    width: 100%;
+}

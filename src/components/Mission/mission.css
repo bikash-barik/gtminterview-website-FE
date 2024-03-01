@@ -1,0 +1,75 @@
+.missionsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.missionrow1{
+    width: 80%;
+    text-align: center;
+}
+
+.missionrow2{
+    display: flex;
+    width: 80%;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.missioninnerrow{
+    display: flex;
+}
+
+.missioninnercolumn1{
+    width: 20%;
+}
+
+.missioninnercolumn2{
+    width: 70%;
+}
+
+.missionimage{
+    height: 50px;
+    width: 50px;
+}
+
+.missionheading{
+    margin-bottom: 6px;
+    color: var(--e-global-color-fe4ec32);
+    font-family: "Nunito", Sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.missionpara{
+    color: var(--e-global-color-fd86af4);
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.missionrow3{
+    display: flex;
+    width: 80%;
+}
+
+.missionrow3column1, .missionrow3column2{
+    display: flex;
+    padding: 30px;  
+}
+
+.missionrow3column1{
+    background-color: #DEF0F2;
+}
+
+.missionrow3column2{
+    background-color: #3BB9C8;
+    color: white;
+}
+
+.missionrow3innercolumn{
+    padding: 40px 0;
+}
