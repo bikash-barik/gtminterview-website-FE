@@ -21,3 +21,11 @@
 .countercolumnheading{
     font-size: 3rem;
 }
+
+@media screen and (max-width:600px) {
+    .countercolumn{
+        grid-column: span 4;
+        border-right: none;
+        border-bottom: 2px solid white;
+    }
+}

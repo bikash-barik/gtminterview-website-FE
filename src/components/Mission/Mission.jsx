@@ -80,7 +80,7 @@ export default function Mission() {
                     <p>It is an obvious fact that professional digital marketing services are not always expensive and expensive services are not always good.</p>
                 </div>
                 <div className="missionrow2innercolumn">
-                    <img src={mission} alt="mission" />
+                    <img className='missionimg' src={mission} alt="mission" />
                 </div>
             </div>
 
@@ -90,7 +90,7 @@ export default function Mission() {
                     <p>It is an obvious fact that professional digital marketing services are not always expensive and expensive services are not always good.</p>
                 </div>
                 <div className="missionrow2innercolumn">
-                    <img src={vision} alt="vision" />
+                    <img  className='missionimg' src={vision} alt="vision" />
                 </div>
             </div>
         </div>

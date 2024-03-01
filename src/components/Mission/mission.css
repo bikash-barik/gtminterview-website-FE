@@ -27,7 +27,7 @@
 }
 
 .missioninnercolumn2{
-    width: 70%;
+    width: 80%;
 }
 
 .missionimage{
@@ -72,4 +72,30 @@
 
 .missionrow3innercolumn{
     padding: 40px 0;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .missionrow2{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .missioninnerrow{
+        width: 100%;
+    }
+
+    .missionrow3{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .missionrow3column1,.missionrow3column2{
+        flex-direction: column;
+    }
+
+    .missionimg{
+        width: 100%;
+    }
 }
