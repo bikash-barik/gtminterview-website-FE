@@ -42,7 +42,7 @@ const Header = () => {
               <a href='/contact' className="nav-link link ">CONTACT US</a>
             </li>
             <li className="nav-item">
-              <a  href='/' className="nav-link link">CAREER<KeyboardArrowDownIcon/></a>
+              <a  href='/career' className="nav-link link">CAREER<KeyboardArrowDownIcon/></a>
             </li>
           </ul>
           </div>
