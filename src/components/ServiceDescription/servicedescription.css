@@ -1,0 +1,54 @@
+.servicedescriptionsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.servicedescriptionrow{
+    width: 80%;
+    display: flex;
+    gap: 40px;
+}
+
+.servicedescriptioncolumn1{
+    width: 70%;
+}
+
+.servicedescriptioncolumn2{
+    width: 30%;
+}
+
+.servicedescriptionpara{
+    color: var(--e-global-color-text);
+    text-align: justify;
+    font-family: "Arial", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.servicedescriptionimg{
+    width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    .servicedescriptionrow{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .servicedescriptioncolumn1, .servicedescriptioncolumn2{
+        width: 100%;
+    }
+
+    .servicedescriptioncolumn2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .servicedescriptionimg{
+        height: 200px;
+    }
+}

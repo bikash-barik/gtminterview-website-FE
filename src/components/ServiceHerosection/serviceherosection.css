@@ -1,0 +1,35 @@
+.serviceherosection{
+    background-image: url('../../assets//images/home-banner-1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    position: relative;
+    display: flex;
+    align-items: last baseline;
+}
+
+.serviceherosection::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 0.4;
+  height: 30vh;
+}
+
+.serviceherosectionrow{
+    background-color: #00000080;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceherosectionheadingdiv{
+    width: 60%;
+}

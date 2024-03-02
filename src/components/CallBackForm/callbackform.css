@@ -1,0 +1,27 @@
+.callbackform{
+    background-color: var(--e-global-color-fd86af4);
+    width: 278.013px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.callbackform > h5{
+    width: 100%;
+    text-align: center;
+}
+
+.callbackforminputdiv > input{
+    width: 100%;
+    padding: 8px;
+}
+
+.callbackformbtn{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: var(--e-global-color-accent);
+    border: none;
+    color: white;
+    font-weight: 600;
+}

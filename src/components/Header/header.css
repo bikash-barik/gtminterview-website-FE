@@ -29,6 +29,9 @@
     margin: 0 50px;
 }
 
+.nav-item{
+    padding: 0 10px;
+}
 .hamburger{
     font-size: 2rem;
     cursor: pointer;
