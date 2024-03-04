@@ -15,8 +15,8 @@ const Header = () => {
   return (
     <Box>
       <div className='header'>
-        <Typography className='typho-1'><HeadsetIcon />+91 7978332292</Typography>
-        <Typography className='typho-1'><EmailIcon />info@glowtechmor.com</Typography>
+        <div className='typho-1'><HeadsetIcon />+91 7978332292</div>
+        <div className='typho-1'><EmailIcon />info@glowtechmor.com</div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-light ">
         <img className='logo' src={logo} alt='logo' />

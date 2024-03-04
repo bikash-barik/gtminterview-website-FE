@@ -1,5 +1,4 @@
-import React from 'react'
-import './about.css';
+import React from 'react';
 import Top from '../../components/Top/Top';
 import OverView from '../../components/Overview/OverView';
 import Counter from '../../components/Counter/Counter';

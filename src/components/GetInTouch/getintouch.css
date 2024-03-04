@@ -1,0 +1,75 @@
+.form-d {
+    background: linear-gradient(359deg, #fff, skyblue);
+    margin-top: 19px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+
+.form-d h3 {
+    text-align: center;
+    display: inline-block;
+}
+  
+
+.flex-form {
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.formm{
+    width: 50%;      
+}
+
+.boxes{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+  .add{
+    display: flex;
+    gap: 10px;
+  }
+
+  .fast-box{
+    padding: 20px 20px 20px 20px;
+    background-color: #FFFFFF;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
+    gap: 10px;
+    width: 373px;
+  }
+  .second-box{
+    width: 373px;
+    padding: 20px 20px 20px 20px;
+    background-color: #FFFFFF;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width:600px) {
+    .flex-form{
+        flex-direction: column;
+        gap: 50px;
+        width: 90%;
+    }
+
+    .formm,.boxes{
+        width: 100%;
+    }
+
+    .fast-box,.second-box{
+        width: 100%;
+    }
+  }

@@ -45,8 +45,8 @@
 
 @media screen and (max-width:600px) {
     .header{
-        padding: 0 2px;
-        gap: 5px;
+        padding: 0 12px;
+        gap: 15px;
     }
     .navbardiv{
         justify-content: flex-start;
@@ -57,6 +57,7 @@
     }
     .typho-1 {
         font-weight: 500;
+        font-size: 12px;
     }
 
     .hamburger{

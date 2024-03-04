@@ -1,0 +1,24 @@
+.banner-image {
+    margin-top: 40px;
+    min-height: 300px;
+    background-image: url(../../assets/images/banner-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .banner-image h3 {
+    color: #fff;
+    font-family: "Nunito", Sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .b-i-s {
+    padding: 134px;
+    text-align: center;
+  }
+  
+  .b-i-s .btn-1 {
+    border-radius: 39px;
+    background: #f4c81f;
+    margin-top: 13px;
+  }

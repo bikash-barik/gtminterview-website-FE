@@ -49,6 +49,7 @@
   gap: 10px;
   font-weight: 600;
   /* width: 100%; */
+  font-size: 15px;
 }
 
 .logo {
@@ -212,11 +213,6 @@
   width: 30%;
 }
 
-/* .container-2 .c-left{
-  opacity: 0;
-  animation: slideRight Is ease forwards;
-  animation-delay: 1s;
-} */
 .container-2 h3 {
   color: rgb(11, 158, 218);
   font-weight: 600;
@@ -247,154 +243,6 @@
   height: 400px;
 }
 
-.container-3 {
-  text-align: center;
-  padding: 30px;
-}
-
-
-.container-3 h5 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: deepskyblue;
-}
-
-.img-section{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container-4 {
-  background: #f8f8f8;
-  margin-top: 40px;
-}
-
-.container-4 .c-top {
-  text-align: center;
-  padding: 13px
-}
-
-.container-4 h6 {
-  font-weight: 600;
-  color: deepskyblue;
-}
-
-.card-container {
-  display: flex;
-  gap: 75px;
-  border-radius: 10px;
-}
-
-.leftcardcontainer{
-  width: 40%;
-  margin-left: 53px;
-}
-
-.card-container .left-card {
-  display: flex;
-  gap: 10px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 1px 2px 8px 0 #ccc;
-  border-radius: 10px;
-}
-
-.card-container .right-card {
-  display: flex;
-  gap: 10px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 1px 2px 8px 0 #ccc;
-  border-radius: 10px;
-}
-
-/* banner image start */
-.banner-image {
-  margin-top: 40px;
-  min-height: 300px;
-  background-image: url(./assets/images/banner-bg.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner-image h3 {
-  color: #fff;
-  font-family: "Nunito", Sans-serif;
-  letter-spacing: 1px;
-}
-
-.b-i-s {
-  padding: 134px;
-  text-align: center;
-}
-
-.b-i-s .btn-1 {
-  border-radius: 39px;
-  background: #f4c81f;
-  margin-top: 13px;
-}
-
-
-
-/* banner image end */
-
-/* key frame animation start */
-/* @keyframes slideRight{
-  0%{
-    transform:translate(-100px);
-    opacity: 0;
-  }
-  100%{
-    transform:translate(0);
-    opacity: 1;
-  }
-} */
-/* key frame animation end */
-
-/* footer css start */
-
-.footerdiv{
-  background-color: #0b3155;
-  width: 100%;
-  padding: 30px 0;
-}
-.box-2 {
- width: 100%;
-}
-
-.g-f {
-  margin: 15px;
-  font-size: 14px;
-  color: #fff;
-  display: flex;
-  gap: 10px;
-  margin-top: 18px !important;
-}
-
-
-.icon-section {
-  display: flex;
-  gap: 15px;
-  color: #fff;
-  margin-top: 40px !important;
-}
-
-.second-footer {
-  background-color: #0b3155;
-  width: 100%;
-  display: flex;
-  gap: 166px;
-  padding: 30px;
-}
-
-.footer-right {
-  margin-left: -32px;
-  margin-top: 29px;
-}
-
-/* footer css end */
-
 /* commerce css start */
 .commerce{
   height: 122px;
@@ -412,61 +260,7 @@
 }
 /* commerce css end */
 
-/* form css start */
-.form-d {
-  background: linear-gradient(359deg, #fff, skyblue);
-  /* height: 550px; */
-  margin-top: 19px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0;
-}
-.form-d h3 {
-  position: relative;
-  left:77px;
-  top: 27px;
-  display: inline-block;
-}
 
-.flex-form {
-  display: flex;
-  /* padding: 79px; */
-  gap: 182px;
-  margin-top: 50px;
-}
-
-.add{
-  display: flex;
-  gap: 10px;
-}
-.fast-box{
-  padding: 20px 20px 20px 20px;
-  background-color: #FFFFFF;
-  border-radius: 9px 9px 9px 9px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
-  gap: 10px;
-  /* position: relative; */
-  /* bottom: 74px; */
-  /* height: 145px; */
-  width: 373px;
-}
-.second-box{
-  /* height: 113px; */
-  width: 373px;
-  padding: 20px 20px 20px 20px;
-  background-color: #FFFFFF;
-  border-radius: 9px 9px 9px 9px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
-  gap: 10px;
-  /* position: relative; */
-  /* bottom: 63px; */
-  margin-top: 10px;
-}
-
-/* form css end */
 
 @media screen and (max-width:600px) {
   .navbar{
@@ -497,43 +291,7 @@
     flex-direction: column;
     width: 90%;
   }
+  
 
-  .b-i-s{
-    padding: 50px;
-  }
-
-  .flex-form{
-    flex-direction: column;
-  }
-
-  .form-d h3{
-    left: 10px;
-  }
-
-  .card-container{
-    flex-direction: column;
-  }
-
-  .card-container{
-    gap: 10px;
-  }
-
-  .c-left, .c-right{
-    width: 100%;
-  }
-
-  .leftcardcontainer {
-    width: 90%;
-    margin-left: 20px;
-  }
-
-  .second-footer{
-    flex-direction: column;
-    padding: 10px;
-    gap: 20px;
-  }
-
-  .footer-right{
-    margin-left: 0;
-  }
+  
 }
