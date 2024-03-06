@@ -2,6 +2,11 @@
     padding: 0 20px;
 }
 
+.typho-1 > a{
+    text-decoration: none;
+    color: white !important;
+}
+
 .navbardiv{
     width: 100%;
     display: flex;
@@ -30,8 +35,27 @@
 }
 
 .nav-item{
-    padding: 0 10px;
+    padding: 20px 10px;
+    cursor: pointer;
 }
+
+
+.servicenavitem:hover .service-mega-menu{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.productnavitem,.careernavitem{
+  position: relative;
+}
+
+.careernavitem:hover .careermegamenu,
+.productnavitem:hover .productmegamenu{
+    visibility: visible;
+    opacity: 1;
+}
+
 .hamburger{
     font-size: 2rem;
     cursor: pointer;

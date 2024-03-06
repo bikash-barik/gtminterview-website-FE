@@ -9,6 +9,12 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import sky1 from '../../assets/images/gtm17.png';
+import company1 from '../../assets/images/company1.svg';
+import company2 from '../../assets/images/company2.png';
+import company3 from '../../assets/images/company3.png';
+import googleplay from '../../assets/images/googleplay.png';
+import appstore from '../../assets/images/appstore.png';
+
 import './footer.css';
 
 const Footer = () => {
@@ -47,7 +53,15 @@ const Footer = () => {
                     </div>
                     <div className='footer-left'>
                         <Typography style={{color:"#fff"}}>For inquiries :info@glowtechmor.com</Typography>
-                        <img style={{width:"100%"}}src={sky1} alt='sky1' />
+                            <Grid className='icon-section' item xs={12} sm={6} md={4} lg={3}>
+                                 <img className='footercompanyimg' style={{width:"100%"}} src={company1} alt='sky1' />
+                                 <img className='footercompanyimg' style={{width:"100%"}} src={company2} alt='sky1' />
+                                 <img className='footercompanyimg' style={{width:"100%"}} src={company3} alt='sky1' />
+                            </Grid>
+                            <Grid className='icon-section' item xs={12} sm={6} md={4} lg={3}>
+                                <a href='https://play.google.com/store/apps/details?id=com.glowtechmorservice.glowtechmor'><img className='footercompanyimg' style={{width:"100%"}}  src={googleplay} alt="" /></a>
+                                <a href='https://www.apple.com/in/app-store/'><img className='footercompanyimg' style={{width:"100%"}}  src={appstore} alt="" /></a>
+                            </Grid>
                     </div>
                 </Box> 
             </Container>

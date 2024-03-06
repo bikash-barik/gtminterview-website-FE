@@ -38,6 +38,11 @@
     margin-left: -32px;
     margin-top: 29px;
   }
+
+  .footercompanyimg{
+    width: 100%;
+    height: 60px;
+  }
   
   @media screen and (max-width:600px) {
     .second-footer{

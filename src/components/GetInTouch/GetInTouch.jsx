@@ -9,7 +9,7 @@ export default function GetInTouch() {
   return (
     <div>
        <form className='form-d'>
-            <h3>GET IN TOUCH WITH US</h3>
+            <h3 data-aos="zoom-in">GET IN TOUCH WITH US</h3>
                 <div className='flex-form'>
                     
                     <div className='formm'>
@@ -34,15 +34,15 @@ export default function GetInTouch() {
                     </div>
                     
                     <div className='boxes'>
-                        <div className='fast-box'>
+                        <div className='fast-box' data-aos="fade-up">
                             <Typography className='add'>< LocationOnIcon style={{ color: "#0b9eda" }} />Address</Typography>
                             <p style={{ color: "#ccc" }}>WeWork Prestige Cube Koramangala, Site No. 26, Laskar Hosur Road, Adugodi, Bangalore, KA 560029</p>
                         </div>
-                        <div className='second-box'>
+                        <div className='second-box'data-aos="fade-up">
                             <Typography className='add'><EmailIcon style={{ color: "yellowgreen" }} />Email</Typography>
                             <p style={{ color: "#ccc" }}>info@glowtechmor.com</p>
                         </div>
-                        <div className='second-box'>
+                        <div className='second-box' data-aos="fade-up">
                             <Typography className='add'><PhoneIcon style={{ color: "red" }} />Phone</Typography>
                             <p style={{ color: "#ccc" }}>+91 9064370711</p>
                         </div>

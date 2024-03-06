@@ -1,0 +1,66 @@
+.service-mega-menu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid black;
+    cursor: pointer;
+    transition: visibility 0.5s, opacity 0.5s;
+  }
+
+  .service-mega-menu:hover{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .servicemegamenurow{
+    display: flex;
+    width: 85%;
+    gap: 30px;
+  }
+
+  .servicemenu-column1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+  }
+
+  .servicemenu-column2{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 10px; */
+  } 
+  
+ .servicemegamenuimg{
+    width: 100%;
+    height: 35vh;
+ }
+
+ .serviceinnercolumninner{
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+ }
+
+ .serviceimagecolumn, .serviceparacolumn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ }
+
+ .servicecolumnimage{
+  height: 30px;
+  width: 30px;
+ }

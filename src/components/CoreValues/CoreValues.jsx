@@ -57,7 +57,7 @@ export default function CoreValues() {
         <div className='leftcardcontainer'>
         {
             data.slice(0,data.length/2).map((item,index)=>(
-                <div className='left-card' >
+                <div className='left-card' data-aos="fade-up">
                    <div className='left-card-1'>
                       <img style={{ width: "100px" }} src={item.coreimage} alt='logo7' />
                    </div>
@@ -74,7 +74,7 @@ export default function CoreValues() {
        <div className='leftcardcontainer'>
        {
             data.slice(data.length/2,data.length).map((item,index)=>(
-                <div className='left-card' >
+                <div className='left-card' data-aos="fade-up">
                    <div className='left-card-1'>
                       <img style={{ width: "100px" }} src={item.coreimage} alt='logo7' />
                    </div>

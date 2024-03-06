@@ -14,6 +14,12 @@
 .careercolumn1, .careercolumn2{
     width: 50%;
     text-align: center;
+    cursor: pointer;
+}
+
+.careercolumn1, .careercolumn2:hover{
+    background-color: #333;
+    color: white;
 }
 
 .careercolumn1{
@@ -80,9 +86,46 @@
 
 .careerrow2innerrow2{
     border: 2px solid #eee;
-    padding: 8px;
+    padding: 8px 20px 8px 20px;
     margin: 20px 0 10px 0;
+    cursor: pointer;
 }
+
+.accordion-title{
+    margin-bottom: 0;
+}
+
+.accordianspan{
+    margin-right: 10px;
+}
+
+.carerdescription .accordion-content {
+    display: none;
+}
+
+.carerdescription.active .accordion-content {
+    display: block;
+}
+
+.description-content {
+    padding: 10px;
+    color: black;
+}
+
+.descriptionul{
+    list-style: circle;
+    color: black;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
 
 @media screen and (max-width:600px) {
     .careerrow2innerrow1{
@@ -94,7 +137,7 @@
     }
 
     .careerinnercolumn2{
-        padding: 10px 0;
+        padding: 15px 0;
     }
 
 }
