@@ -43,7 +43,7 @@ export default function Mission() {
             <div className="misssioncolumn1">
                     {
                         data.slice(0,data.length/2).map((item,index)=>(
-                            <div key={index} className="missioninnerrow">
+                            <div key={index} className="missioninnerrow" data-aos="fade-up">
                             <div className="missioninnercolumn1">
                                 <img className='missionimage' src={tick} alt="tick" />
                             </div>
@@ -59,7 +59,7 @@ export default function Mission() {
             <div className="missioncolumn1">
                     {
                         data.slice(data.length/2,data.length).map((item,index)=>(
-                            <div key={index} className="missioninnerrow">
+                            <div key={index} className="missioninnerrow" data-aos="fade-up">
                             <div className="missioninnercolumn1">
                                 <img className='missionimage' src={tick} alt="tick" />
                             </div>
@@ -74,7 +74,7 @@ export default function Mission() {
         </div>
 
         <div className="missionrow3">
-            <div className="missionrow3column1">
+            <div className="missionrow3column1" data-aos="flip-right">
                 <div className="missionrow3innercolumn">
                     <h2>Our Mission</h2>
                     <p>It is an obvious fact that professional digital marketing services are not always expensive and expensive services are not always good.</p>
@@ -84,7 +84,7 @@ export default function Mission() {
                 </div>
             </div>
 
-            <div className="missionrow3column2">
+            <div className="missionrow3column2"  data-aos="flip-left">
                 <div className="missionrow3innercolumn">
                     <h2>Our Vision</h2>
                     <p>It is an obvious fact that professional digital marketing services are not always expensive and expensive services are not always good.</p>

@@ -3,7 +3,7 @@ import './callbackform.css';
 
 export default function CallBackForm() {
   return (
-    <section className="callbackform">
+    <section className="callbackform"  data-aos="fade-up">
       <h5>CALL BACK REQUEST</h5>
 
       <div className="callbackinnerdiv">

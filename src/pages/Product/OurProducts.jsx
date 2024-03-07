@@ -68,7 +68,7 @@ export default function ourproduct() {
     <Top heading={"OUR PRODUCTS"}/>
     <div className="opdiv">
       {data.map((item, index) => (
-        <div className="oprow" key={index}>
+        <div className="oprow" key={index} data-aos="fade-up">
           {(index % 2 === 0) ? (
             <>
             <div className="opcolumn2">

@@ -52,7 +52,7 @@ const Contact = () => {
                <i class="fa fa-map-marker"></i>
             </div>
 
-            <div className="contactaddresspara">
+            <div className="contactaddresspara" data-aos="fade-up">
                 <h4 className='addressheading'>Address</h4>
                 <p className='addresspara'>WeWork Prestige Cube Koramangala, Site No. 26, Laskar Hosur Road, Adugodi, Bangalore, KA 560029</p>
             </div>

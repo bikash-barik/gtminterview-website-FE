@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box} from '@mui/material'
 import React,{useState} from 'react'
 import HeadsetIcon from '@mui/icons-material/Headset';
 import EmailIcon from '@mui/icons-material/Email';
@@ -13,22 +13,18 @@ import ProductMegaMenu from '../ProductMegamenu/ProductMegaMenu';
 import CareerMegaMenu from '../CareerMegaMenu/CareerMegaMenu';
 const Header = () => {
   const [open, setOpne] = useState(false);
-  
-  const [isMegaMenuOpen, setMegaMenuOpen] = useState(false);
-
-  const handleMouseEnter = () => {
-    setMegaMenuOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-      setMegaMenuOpen(false);
-  };
 
   return (
     <Box>
       <div className='header'>
+        <div className="marquee-container">
+              <h4 className="newheaderheading marquee-content">Bring both tangible and Intangible business metrics to the table to beat the odds.</h4>
+        </div>
+        <div className="headersecond">
         <div className='typho-1' ><HeadsetIcon /><a className='headerancher' href="tel:7978332292"> +91 7978332292</a></div>
         <div className='typho-1'><EmailIcon />info@glowtechmor.com</div>
+        </div>
+       
       </div>
       <nav className="navbar navbar-expand-lg navbar-light ">
         <img className='logo' src={logo} alt='logo' />

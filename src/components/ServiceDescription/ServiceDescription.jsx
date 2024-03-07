@@ -17,11 +17,11 @@ export default function ServiceDescription() {
 
       <div className="servicedescriptionrow">
         <div className="servicedescriptioncolumn1">
-          <p className="servicedescriptionpara">{data.description1}</p>
+          <p className="servicedescriptionpara"  data-aos="fade-up">{data.description1}</p>
           {/* <img className="servicedescriptionimg" src={serviceimg} alt="" /> */}
           <ServicesName/>
-          <p className="servicedescriptionpara">{data.description2}</p>
-          <img className="servicedescriptionimg" src={data.image} alt="developmentimage" />
+          <p className="servicedescriptionpara" data-aos="fade-up">{data.description2}</p>
+          <img className="servicedescriptionimg" src={data.image} alt="developmentimage" data-aos="fade-up"/>
         </div>
 
         <div className="servicedescriptioncolumn2">

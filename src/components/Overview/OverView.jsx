@@ -26,7 +26,7 @@ export default function OverView() {
         </p>
 
         <div className="overviewrow2innerdiv">
-          <div className="overviewrow2column1">
+          <div className="overviewrow2column1" data-aos="fade-up">
             <p className="overviewcolumnpara">
               we have a dedicated and talented team of web developers. As a
               team, we are fully committed to helping you transform your vision
@@ -59,7 +59,7 @@ export default function OverView() {
 
           </div>
 
-          <div className="overviewrow2column1">
+          <div className="overviewrow2column1" data-aos="fade-up">
             <img className="overviewcolumnimage" src={contact} alt="" />
           </div>
         </div>

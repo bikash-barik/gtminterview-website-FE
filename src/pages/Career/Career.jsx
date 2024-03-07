@@ -65,7 +65,7 @@ export default function Career() {
 
       <div className="careerrow2">
         {data.map((item, index) => (
-          <div className="careerrow2innerrow">
+          <div className="careerrow2innerrow" data-aos="fade-up">
             <div className="careerrow2innerrow1">
               <div className="careerinnercolumn1">
                 <img className="careerimg" src={item.jobimage} alt="jobimage" />
