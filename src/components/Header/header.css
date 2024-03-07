@@ -75,7 +75,7 @@
     .navbardiv{
         justify-content: flex-start;
         position: absolute;
-        top: -300px;
+        top: -600px;
         left: 0;
         padding-left: 20px;
     }

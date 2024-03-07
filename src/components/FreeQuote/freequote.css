@@ -22,3 +22,9 @@
     background: #f4c81f;
     margin-top: 13px;
   }
+
+  @media screen and (max-width:600px) {
+    .b-i-s{
+      padding: 50px;
+    }
+  }

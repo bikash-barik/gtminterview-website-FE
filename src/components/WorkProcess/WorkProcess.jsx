@@ -10,7 +10,7 @@ export default function WorkProcess() {
         <h2>OUR WORKING PROCESS</h2>
     </div>
     <div className='img-section'>
-        <img className='workprocessimg' src={logo6} alt='logo6' />
+        <img className='workprocessimg' src={logo6} alt='logo6'  data-aos="flip-left"/>
     </div>
     </>
   

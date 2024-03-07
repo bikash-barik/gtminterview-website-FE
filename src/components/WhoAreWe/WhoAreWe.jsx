@@ -7,7 +7,7 @@ export default function WhoAreWe() {
   return (
     <div className='whowearediv'>
            <div className='container-2'>
-                <div className='c-left' data-aos="fade-right">
+                <div className='c-left' data-aos="fade-up">
                     <h3>Who we are</h3>
                     <h2>Holistic & Innovative Solutions For Your Business Needs​</h2>
                     <p>We offer integrated consulting and technology implementation services to businesses that want to redefine their customer success stories through digital transformation.</p>
@@ -17,7 +17,7 @@ export default function WhoAreWe() {
                     <p>Our expertise in blockchain technologies include solutions such as Smart Business Contracts, Automated Lottery Systems, Customer Loyalty & Rewards System, Real Estate Contract Management Systems, and much more.</p>
                     <Button className='btn' variant="contained">Get Free Quote<ChevronRightIcon /></Button>
                 </div>
-                <div className='c-right' data-aos="fade-left">
+                <div className='c-right' data-aos="fade-up">
                     <img className='c-right-img' src={logo5} alt='logo5' />
                 </div>
           </div>
