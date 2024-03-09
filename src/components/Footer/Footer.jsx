@@ -8,7 +8,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import sky1 from '../../assets/images/gtm17.png';
+// import sky1 from '../../assets/images/gtm17.png';
 import company1 from '../../assets/images/company1.svg';
 import company2 from '../../assets/images/company2.png';
 import company3 from '../../assets/images/company3.png';

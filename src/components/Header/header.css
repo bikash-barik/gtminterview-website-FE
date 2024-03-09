@@ -67,7 +67,7 @@
 }
 
 .newheaderheading{
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     margin-bottom: 0;
 }
@@ -101,8 +101,9 @@
 
 @media screen and (max-width:600px) {
     .header{
-        padding: 0 12px;
-        gap: 15px;
+        padding:12px;
+        /* gap: 15px; */
+        flex-direction: column-reverse;
     }
     .navbardiv{
         justify-content: flex-start;
@@ -114,9 +115,22 @@
     .typho-1 {
         font-weight: 500;
         font-size: 12px;
+        width: 100%;
     }
 
     .hamburger{
         display: block;
+    }
+
+    .marquee-container, .headersecond{
+        width: 100%;
+    }
+
+    .headersecond{
+        gap: 0;
+    }
+
+    .marquee-container{
+        display: none;
     }
 }

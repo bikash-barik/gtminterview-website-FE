@@ -1,0 +1,43 @@
+.verifycertificatesection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.verifycertificatediv{
+    width: 40%;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.verifycertificatediv > h3{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.verifycertificateinputdiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.verifycertificateinputdiv > input{
+    padding: 10px;
+}
+
+.verifycertificatediv > button{
+    width: 100%;
+    margin: 30px 0 10px 0;
+    padding: 10px;
+    background-color: #1064B7;
+    color: white;
+    border:none ;
+}
+
+@media screen and (max-width:600px) {
+    .verifycertificatediv{
+        width: 90%;
+    }
+}

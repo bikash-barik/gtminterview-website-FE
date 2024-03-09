@@ -1,6 +1,6 @@
 import React from "react";
 import './servicedescription.css';
-import serviceimg from '../../assets/images/serviceimg.png';
+// import serviceimg from '../../assets/images/serviceimg.png';
 import webdevimg from '../../assets/images/webdevimg.jpg';
 import CallBackForm from "../CallBackForm/CallBackForm";
 import ServicesName from "../ServicesName/ServicesName";

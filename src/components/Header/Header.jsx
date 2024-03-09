@@ -18,7 +18,7 @@ const Header = () => {
     <Box>
       <div className='header'>
         <div className="marquee-container">
-              <h4 className="newheaderheading marquee-content">Bring both tangible and Intangible business metrics to the table to beat the odds.</h4>
+              <h5 className="newheaderheading marquee-content">Bring both tangible and Intangible business metrics to the table to beat the odds.</h5>
         </div>
         <div className="headersecond">
         <div className='typho-1' ><HeadsetIcon /><a className='headerancher' href="tel:7978332292"> +91 7978332292</a></div>

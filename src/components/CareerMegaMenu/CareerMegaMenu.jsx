@@ -8,19 +8,23 @@ import hiring from '../../assets/images/hiring.png';
 const data1 = [
     {
       careerimage : job,
-      careername : "Jobs"
+      careername : "Jobs",
+      careerpage :"/career"
     },
     {
       careerimage:intern,
-      careername : "Internship"
+      careername : "Internship",
+      careerpage : "/career"
     },
     {
       careerimage : verify,
-      careername : "Verify Your Certificate"
+      careername : "Verify Your Certificate",
+      careerpage : "/verify-certificate"
     },
     {
       careerimage:hiring,
-      careername : "Our Hiring Process"
+      careername : "Our Hiring Process",
+      careerpage : "/hiring-process"
     }
   
   ]
@@ -35,7 +39,7 @@ export default function CareerMegaMenu() {
                            <img className="servicecolumnimage" src={item.careerimage} alt={item.careerimage} />
                         </div>
                     <div className="serviceparacolumn">
-                        <p style={{marginBottom:"0"}}>{item.careername}</p>
+                        <a href={item.careerpage} style={{color:"black",textDecoration:"none"}}><p style={{marginBottom:"0"}}>{item.careername}</p></a>
                     </div>
               </div>
             ))
