@@ -1,0 +1,55 @@
+.signupsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signupdiv{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.signupheading{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Mansalva", cursive;
+    color: #082244;
+    margin-bottom: 30px;
+}
+
+.signupinput{
+    padding: 15px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.signupbtn{
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #082244;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.signuppara{
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #3457D5;
+}
+
+@media screen and (max-width:600px) {
+    .signupdiv{
+        width: 90%;
+    }
+}

@@ -1,0 +1,106 @@
+.uploadimagediv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoutbtndiv{
+    display: flex;
+    justify-content: flex-end;
+    width: 95%;
+}
+
+.logoutbtninnerdiv{
+    padding: 30px;
+}
+
+.uploadimagerow{
+    width: 95%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.uploadimagecolumn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.uploadimagecolumninnerdiv{
+    border-Radius: 5px;
+    padding: 20px;
+    width: 80%;
+    box-Sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.uploadimageimage{
+    width:100%;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+}
+
+.uploadimagebtn{
+  padding: 10px 15px;
+  background-color: #082244;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  font-weight: 700;
+  width: 50%;
+  cursor: pointer;
+}
+
+.logoutbtn{
+    padding: 10px 15px;
+    background-color: #082244;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;  
+}
+
+.loadingimagediv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.loadingimageinnerdiv{
+    width: 50%;
+}
+
+.loadingimageimagediv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingimage{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.loadingimagemessage{
+    margin-top: 30px;
+    text-align: center;
+}
+
+@media screen and (max-width:600px){
+    .uploadimagerow{
+        flex-direction: column-reverse;
+    }
+    .uploadimagecolumn{
+        width: 100%;
+    }
+}
