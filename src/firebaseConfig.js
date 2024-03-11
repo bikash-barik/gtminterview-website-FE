@@ -22,4 +22,5 @@ setPersistence(auth, browserLocalPersistence);
 
 export { db };
 export { storage, auth};
-export default app;
+// export default app;
+export default firebaseConfig;

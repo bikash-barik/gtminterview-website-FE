@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth'; 
+import 'firebase/compat/auth';
+import firebaseConfig from '../../firebaseConfig'; 
 import { useNavigate } from 'react-router-dom';
+
+firebase.initializeApp(firebaseConfig);
 
 export default function SignUp () {
   const [email, setEmail] = useState('');
