@@ -9,10 +9,11 @@ export default function GetInTouch() {
   return (
     <div>
        <form className='form-d'>
-            <h3 data-aos="zoom-in">GET IN TOUCH WITH US</h3>
                 <div className='flex-form'>
-                    
+                
                     <div className='formm' data-aos="fade-up">
+                        <h2 data-aos="zoom-in">GET IN TOUCH WITH US</h2>
+
                         <div className="form-row form-e" >
                             <div className="form-group col-md-6">
                                 <input type="text" className="form-control" id="inputEmail4" placeholder="Fast Name" />

@@ -14,3 +14,9 @@
     transition: visibility 0.5s, opacity 0.5s;
 }
 
+
+@media screen and (max-width:600px) {
+    .productmegamenu{
+        width: 100%;
+    }
+}

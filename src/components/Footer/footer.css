@@ -40,7 +40,7 @@
   }
 
   .footercompanyimg{
-    width: 100%;
+    width: 80%;
     height: 60px;
   }
   
@@ -56,6 +56,6 @@
     }
 
     .footercompanyimg{
-      height: 35px;
+      height: 32px;
     }
   }

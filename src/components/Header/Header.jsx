@@ -26,37 +26,38 @@ const Header = () => {
         </div>
        
       </div>
+
       <nav className="navbar navbar-expand-lg navbar-light ">
         <img className='logo' src={logo} alt='logo' />
         <div onClick={() => setOpne(!open)} className="hamburger">
           {open ? <IoIosClose /> : <IoMdMenu />}
         </div>
         <div className={`${open ? "navbardiv1" : "navbardiv"}`} >
-          <div className='navbarul'>
+          {/* <div className='navbarul'> */}
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active" >
-            <Link to='/' className="nav-link link"> HOME</Link>
+            <Link to='/' className="nav-link link" onClick={() => setOpne(false)} > HOME</Link>
             </li>
             <li className="nav-item">
-            <Link to='/about' className="nav-link link"> ABOUT US</Link>
+            <Link to='/about' className="nav-link link" onClick={() => setOpne(false)} > ABOUT US</Link>
             </li>
             <li className="nav-item servicenavitem">
-              <a href='/services' className="nav-link link">SERVICES<KeyboardArrowDownIcon/></a>
+              <a href='/services' className="nav-link link" onClick={() => setOpne(false)} >SERVICES<KeyboardArrowDownIcon/></a>
               <ServicesMegaMenu/>
             </li>
             <li className="nav-item productnavitem">
-              <Link to="/our-products" className="nav-link link">OUR PRODUCTS<KeyboardArrowDownIcon/></Link>
+              <Link to="/our-products" className="nav-link link" onClick={() => setOpne(false)} >OUR PRODUCTS<KeyboardArrowDownIcon/></Link>
               <ProductMegaMenu/>
             </li>
             <li className="nav-item">
-              <a href='/contact' className="nav-link link ">CONTACT US</a>
+              <a href='/contact' className="nav-link link " onClick={() => setOpne(false)} >CONTACT US</a>
             </li>
             <li className="nav-item careernavitem">
               <a  href='/career' className="nav-link link">CAREER<KeyboardArrowDownIcon/></a>
               <CareerMegaMenu/>
             </li>
           </ul>
-          </div>
+          {/* </div> */}
           
           <form className="searchform form-inline my-2 my-lg-0 display-none">
             <input className="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search" />

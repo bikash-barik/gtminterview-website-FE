@@ -54,9 +54,9 @@ const Footer = () => {
                     <div className='footer-left'>
                         <Typography style={{color:"#fff"}}>For inquiries :info@glowtechmor.com</Typography>
                             <Grid className='icon-section' item xs={12} sm={6} md={4} lg={3}>
-                                 <img className='footercompanyimg' style={{width:"100%"}} src={company1} alt='sky1' />
-                                 <img className='footercompanyimg' style={{width:"100%"}} src={company2} alt='sky1' />
-                                 <img className='footercompanyimg' style={{width:"100%"}} src={company3} alt='sky1' />
+                                 <img className='footercompanyimg' src={company1} alt='sky1' />
+                                 <img className='footercompanyimg' src={company2} alt='sky1' />
+                                 <img className='footercompanyimg' src={company3} alt='sky1' />
                             </Grid>
                             <Grid className='icon-section' item xs={12} sm={6} md={4} lg={3}>
                                 <a href='https://play.google.com/store/apps/details?id=com.glowtechmorservice.glowtechmor'><img className='footercompanyimg' style={{width:"100%"}}  src={googleplay} alt="" /></a>

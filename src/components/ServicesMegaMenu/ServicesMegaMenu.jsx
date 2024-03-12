@@ -97,9 +97,11 @@ export default function ServicesMegaMenu() {
   return (
     <div className="service-mega-menu">
       <div className="servicemegamenurow">
+
         <div className="servicemenu-column1">
           <img className="servicemegamenuimg" src={servicemegamenuimg} alt="" />
         </div>
+        
         <div className="servicemenu-column2">
           <div className="sermenuinnercolumn1">
               {

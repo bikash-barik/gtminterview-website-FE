@@ -13,3 +13,9 @@
     border-radius: 10px;
     transition: visibility 0.5s, opacity 0.5s;
 }
+
+@media screen and (max-width:767px) {
+    .careermegamenu{
+        width: 100%;
+    }
+}

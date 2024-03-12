@@ -64,3 +64,23 @@
   height: 30px;
   width: 30px;
  }
+
+ @media screen and (max-width:600px) {
+  .service-mega-menu{
+    max-height: 100%;
+    position: relative;
+  }
+  .servicemegamenurow{
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .servicemenu-column2{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .servicemenu-column1{
+    width: 100%;
+  }
+ }

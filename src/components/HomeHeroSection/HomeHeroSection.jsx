@@ -1,7 +1,8 @@
 import React from 'react'
 import { Box, Button,Typography } from '@mui/material';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+// import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 export default function HomeHeroSection() {
     const [typeEffect] = useTypewriter({
@@ -20,7 +21,7 @@ export default function HomeHeroSection() {
                 <div className='c-lite-1'>
                     <h6 style={{ fontSize: "45px" }}>{typeEffect} <Cursor /></h6>
                     <Typography style={{ marginTop: "26px" }}>Bring both tangible and Intangible business metrics to the table to beat the odds.</Typography>
-                    <Button variant="contained">CONTACT US<ChevronRightIcon /><ChevronRightIcon /></Button>
+                    <Button variant="contained">CONTACT US <FaAngleDoubleRight style={{marginLeft:"5px"}}/></Button>
                 </div>
                 </div>
                

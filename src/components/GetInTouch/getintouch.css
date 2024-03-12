@@ -1,5 +1,4 @@
 .form-d {
-    background: linear-gradient(359deg, #fff, skyblue);
     margin-top: 19px;
     border-radius: 10px;
     display: flex;
@@ -10,9 +9,10 @@
 }
 
 
-.form-d h3 {
+.form-d h2 {
     text-align: center;
     display: inline-block;
+    margin-bottom: 30px;
 }
   
 
@@ -20,8 +20,11 @@
     display: flex;
     gap: 100px;
     margin-top: 50px;
-    width: 80%;
+    padding: 80px;
+    width: 85%;
+    background: linear-gradient(359deg, #fff, skyblue);
 }
+
 
 .formm{
     width: 50%;      
@@ -63,6 +66,10 @@
         flex-direction: column;
         gap: 50px;
         width: 90%;
+    }
+
+    .flex-form {
+      padding: 20px;
     }
 
     .formm,.boxes{
