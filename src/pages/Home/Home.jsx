@@ -6,6 +6,7 @@ import WorkProcess from '../../components/WorkProcess/WorkProcess';
 import HomeHeroSection from '../../components/HomeHeroSection/HomeHeroSection';
 // import OnDemandService from '../../components/OnDemandService.jsx/OnDemandService';
 import WhoAreWe from '../../components/WhoAreWe/WhoAreWe';
+import Serve from '../../components/Serve/Serve';
 
 const Home = () => {    
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <WorkProcess/>
             <CoreValues/>
             <FreeQuote/>
+            <Serve/>
             <GetInTouch/>
         </>                  
     )
