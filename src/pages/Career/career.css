@@ -28,8 +28,15 @@
     padding: 10px 0;
 }
 
+
 .careercolumn2{
     background-color: #eee;
+    padding: 10px 0;
+}
+
+.careercolumn3{
+    background-color: var(--e-global-color-fd86af4);
+    color: white;
     padding: 10px 0;
 }
 
@@ -132,6 +139,10 @@
 
 
 @media screen and (max-width:600px) {
+    .careerrow1{
+        width: 90%;
+    }
+
     .careerrow2innerrow1{
         flex-direction: column;
     }

@@ -34,7 +34,7 @@ const Header = () => {
         </div>
         <div className={`${open ? "navbardiv1" : "navbardiv"}`} >
           {/* <div className='navbarul'> */}
-          <ul className="navbar-nav mr-auto">
+          <ul className="navbar-nav">
             <li className="nav-item active" >
             <Link to='/' className="nav-link link" onClick={() => setOpne(false)} > HOME</Link>
             </li>
