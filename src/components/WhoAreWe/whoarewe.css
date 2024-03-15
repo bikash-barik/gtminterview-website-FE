@@ -1,3 +1,10 @@
+.whowearediv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+}
+  
 .c-left > p{
     color: var(--e-global-color-fd86af4);
     font-family: "Poppins", Sans-serif;

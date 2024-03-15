@@ -18,7 +18,7 @@ import VerifyCertificate from './pages/VerifyCertificate/VerifyCertificate.jsx';
 import Login from './pages/Login/Login.jsx';
 import SignUp from './pages/Signup/Signup.jsx';
 import UploadData from './pages/UploadData/UploadData.jsx';
-
+// import ParticleComponent from './components/ParticleComponent/ParticleComponent';
 
 const isAuthenticated = () => {
   const currentUser = firebase.auth().currentUser;
@@ -38,9 +38,10 @@ const ProtectedRoute = ({ path, element }) => {
 };
 
 function App() {
+
   return (
     <div>
-      <BrowserRouter >
+    <BrowserRouter >
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>} />

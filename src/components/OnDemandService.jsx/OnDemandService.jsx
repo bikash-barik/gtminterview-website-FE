@@ -3,6 +3,8 @@ import { Typography } from '@mui/material'
 import logoo from '../../assets/images/gtm3.png'
 import logooo from '../../assets/images/gtm4.png'
 import logoooo from '../../assets/images/gtm5.png'
+import './ondemandservices.css';
+
 let card = [
     {
         id: 1,
@@ -34,25 +36,28 @@ export default function OnDemandService() {
         <Typography className="on">On-Demand Services</Typography>
       </div>
       <div className="servicediv">
-        <div className="box" data-aos="zoom-in-up">
-          {card.map((e) => (
-            <div
-              key={e.id}
-              onMouseEnter={() => setHov(e)}
-              className={` box-content ${hov === e && "active_hover"}`}
-            >
-              <div className="box-front">
-                <img src={e.image} alt="logoo" />
-                <h3>{e.title}</h3>
+      <div className="box" data-aos="zoom-in-up">
+        {card.map((e) => (
+          <div
+            key={e.id}
+            onMouseEnter={() => setHov(e)}
+            onMouseLeave={() => setHov(null)}
+            className={`box-content ${hov === e && "active_hover"}`}
+          >
+            <div className="card-inner">
+              <div className="card-front">
+                <img src={e.image} alt="logo" />
+                <h4>{e.title}</h4>
                 <p>{e.content}</p>
               </div>
-              <div className="box-back">
+              <div className="card-back">
                 <p>{e.content2}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
+    </div>
     </>
   );
 }

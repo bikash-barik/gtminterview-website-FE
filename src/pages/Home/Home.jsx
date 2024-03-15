@@ -4,7 +4,7 @@ import FreeQuote from '../../components/FreeQuote/FreeQuote';
 import CoreValues from '../../components/CoreValues/CoreValues';
 import WorkProcess from '../../components/WorkProcess/WorkProcess';
 import HomeHeroSection from '../../components/HomeHeroSection/HomeHeroSection';
-// import OnDemandService from '../../components/OnDemandService.jsx/OnDemandService';
+import OnDemandService from '../../components/OnDemandService.jsx/OnDemandService';
 import WhoAreWe from '../../components/WhoAreWe/WhoAreWe';
 import Serve from '../../components/Serve/Serve';
 
@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <>
             <HomeHeroSection/>
-            {/* <OnDemandService/> */}
+            <OnDemandService/>
             <WhoAreWe/>
             <WorkProcess/>
             <CoreValues/>
