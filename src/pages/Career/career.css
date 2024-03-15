@@ -126,6 +126,10 @@
     transform: rotate(180deg);
 }
 
+.elsepartpara{
+    margin: 30px 0;
+}
+
 
 @media screen and (max-width:600px) {
     .careerrow2innerrow1{

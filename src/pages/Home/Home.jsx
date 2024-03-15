@@ -7,6 +7,7 @@ import HomeHeroSection from '../../components/HomeHeroSection/HomeHeroSection';
 import OnDemandService from '../../components/OnDemandService.jsx/OnDemandService';
 import WhoAreWe from '../../components/WhoAreWe/WhoAreWe';
 import Serve from '../../components/Serve/Serve';
+import RecentProjects from '../../components/RecentProjects/RecentProjects';
 
 const Home = () => {    
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <FreeQuote/>
             <Serve/>
             <GetInTouch/>
+            <RecentProjects/>
         </>                  
     )
 }

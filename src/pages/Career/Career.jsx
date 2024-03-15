@@ -4,7 +4,7 @@ import jobimg from "../../assets/images/business-development-manager-job-descrip
 import { FaChevronDown } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 
-const data = [
+const jobsData = [
   {
     jobimage: jobimg,
     jobtitle: "Business Development Manager",
@@ -28,15 +28,34 @@ const data = [
   {
     jobimage: jobimg,
     jobtitle: "MERN(Mongodb Express ReactJs NodeJs ) stack developers",
-    jobdescription:
-      "Looking for MERN(Mongodb Express ReactJs NodeJs ) stack developers",
+    jobdescription:"Looking for MERN(Mongodb Express ReactJs NodeJs ) stack developers",
   },
+];
+
+const internshipsData = [
+  // {
+  //   jobimage: jobimg,
+  //   jobtitle: "Business Development Manager",
+  //   jobdescription: "Looking for Business Development Manager",
+  // },
+  // {
+  //   jobimage: jobimg,
+  //   jobtitle: "User Interface (UI) Designer",
+  //   jobdescription: "Looking for User Interface (UI) Designer",
+  // },
 ];
 
 
 
 export default function Career() {
     const [openIndexes, setOpenIndexes] = useState([]);
+    const [data, setData] = useState(jobsData); // Initialize with jobs data
+    const [isInternshipSelected, setIsInternshipSelected] = useState(false);
+  
+    const handleSectionClick = () => {
+      setData(isInternshipSelected ? jobsData : internshipsData);
+      setIsInternshipSelected(!isInternshipSelected);
+    };
     
   const toggleAccordion = (index) => {
     const updatedIndexes = [...openIndexes];
@@ -54,17 +73,20 @@ export default function Career() {
   return (
     <section className="careersection">
       <div className="careerrow1">
-        <div className="careercolumn1">
+
+        <div className={` ${isInternshipSelected ? 'careercolumn2 ' : 'careercolumn1'}`}  onClick={handleSectionClick}>
           <p className="careercolumnpara">Open Jobs</p>
         </div>
 
-        <div className="careercolumn2">
+        <div className={` ${isInternshipSelected ? 'careercolumn1 ' : 'careercolumn2'}`} onClick={handleSectionClick}>
           <p className="careercolumnpara">Internship</p>
         </div>
+
       </div>
 
       <div className="careerrow2">
-        {data.map((item, index) => (
+        { data.length > 0 ?
+        data.map((item, index) => (
           <div className="careerrow2innerrow" data-aos="fade-up">
             <div className="careerrow2innerrow1">
               <div className="careerinnercolumn1">
@@ -109,7 +131,10 @@ export default function Career() {
               </div>
             </div>
           </div>
-        ))}
+        ))
+        :
+        <p className="elsepartpara">No Openings as of now</p>
+      }
       </div>
     </section>
   );
