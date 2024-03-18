@@ -32,19 +32,19 @@ const data =[
 
 ]
 
-export default function ServicesName() {
+export default function ServicesName({item}) {
   return (
     <section className='servicesnamesection'>
         <div className="servicesnamerow"> 
             {
-                data.map((item,index)=>(
+                item.techUsed.map((item,index)=>(
                     <div className="servicesnamecolumn">
                     <div className="servicesnameimgcolumn">
-                        <img className='servicenameimg' src={item.serviceimage} alt="" />
+                        <img className='servicenameimg' src={item.imageUrl} alt="" />
                     </div>
     
                     <div className="servicesnameheadingcolumn">
-                        <p className='servicenameheading'>{item.servicename}</p>
+                        <p className='servicenameheading'>{item.textInput}</p>
                     </div>
                 </div>
                 ))

@@ -11,17 +11,17 @@ const data = {
     image : webdevimg
 
 }
-export default function ServiceDescription() {
+export default function ServiceDescription({item}) {
   return (
     <section className="servicedescriptionsection">
 
       <div className="servicedescriptionrow">
         <div className="servicedescriptioncolumn1">
-          <p className="servicedescriptionpara"  data-aos="fade-up">{data.description1}</p>
+          <p className="servicedescriptionpara"  data-aos="fade-up">{item.description1}</p>
           {/* <img className="servicedescriptionimg" src={serviceimg} alt="" /> */}
-          <ServicesName/>
-          <p className="servicedescriptionpara" data-aos="fade-up">{data.description2}</p>
-          <img className="servicedescriptionimg" src={data.image} alt="developmentimage" data-aos="fade-up"/>
+          <ServicesName item={item}/>
+          <p className="servicedescriptionpara" data-aos="fade-up">{item.description2}</p>
+          <img className="servicedescriptionimg" src={item.serviceimage} alt="developmentimage" data-aos="fade-up"/>
         </div>
 
         <div className="servicedescriptioncolumn2">
