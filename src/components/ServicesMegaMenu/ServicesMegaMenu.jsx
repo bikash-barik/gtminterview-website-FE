@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./servicemegamenu.css";
 import servicemegamenuimg from "../../assets/images/servicemegamenuimg.png";
 import weblink from '../../assets/images/web-link.png';
@@ -18,6 +18,8 @@ import graphicdesign from '../../assets/images/graphic-design.png';
 import videoandanimation from '../../assets/images/videoandanimation.png';
 import testing from '../../assets/images/testing.png';
 
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
 const data1 = [
   {
@@ -44,10 +46,6 @@ const data1 = [
     serviceimage :posterdesign,
     servicename : "Poster Design"
   },
-
-]
-
-const data2 = [
   {
     serviceimage :digitalmarketing,
     servicename : "Digital Marketing"
@@ -68,10 +66,6 @@ const data2 = [
     serviceimage :devops,
     servicename : "DevOps"
   },
-
-]
-
-const data3 = [
   {
     serviceimage :contentwriting,
     servicename : "Content Writing"
@@ -92,8 +86,25 @@ const data3 = [
     serviceimage :testing,
     servicename : "Testing (App, Games, Software)"
   },
+
 ]
+
 export default function ServicesMegaMenu({ isOpen }) {
+  const[ServiceMegaMenuData,setServiceMegaMenuData]=useState([]);
+
+  useEffect(() => {
+    const firestore = firebase.firestore();
+    const contentDataRef = firestore.collection("ServicesData");
+    const unsubscribe = contentDataRef.onSnapshot((snapshot) => {
+      const newContentData = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      console.log(newContentData);
+      setServiceMegaMenuData(newContentData);
+    });
+    return () => unsubscribe();
+  }, []);
   return (
     <div className={`service-mega-menu ${isOpen ? 'open' : ''}`}>
       <div className="servicemegamenurow">
@@ -105,10 +116,10 @@ export default function ServicesMegaMenu({ isOpen }) {
         <div className="servicemenu-column2">
           <div className="sermenuinnercolumn1">
               {
-                data1.map((item,index)=>(
+                ServiceMegaMenuData.slice(0,(ServiceMegaMenuData.length)/3).map((item,index)=>(
                   <div key={index} className="serviceinnercolumninner">
                         <div className="serviceimagecolumn">
-                           <img className="servicecolumnimage" src={item.serviceimage} alt={item.serviceimage} />
+                           <img className="servicecolumnimage" src={item.servicemegamenuimage} alt={item.servicemegamenuimage} />
                         </div>
                         <div className="serviceparacolumn">
                             <p style={{marginBottom:"0"}}>{item.servicename}</p>
@@ -120,10 +131,10 @@ export default function ServicesMegaMenu({ isOpen }) {
 
           <div className="sermenuinnercolumn1">
           {
-                data2.map((item,index)=>(
+                ServiceMegaMenuData.slice((ServiceMegaMenuData.length)/3,((ServiceMegaMenuData.length)*2)/3).map((item,index)=>(
                   <div key={index} className="serviceinnercolumninner">
                         <div className="serviceimagecolumn">
-                           <img className="servicecolumnimage" src={item.serviceimage} alt={item.serviceimage} />
+                           <img className="servicecolumnimage" src={item.servicemegamenuimage} alt={item.servicemegamenuimage} />
                         </div>
                         <div className="serviceparacolumn">
                             <p style={{marginBottom:"0"}}>{item.servicename}</p>
@@ -135,10 +146,10 @@ export default function ServicesMegaMenu({ isOpen }) {
 
           <div className="sermenuinnercolumn1">
           {
-                data3.map((item,index)=>(
+                ServiceMegaMenuData.slice(((ServiceMegaMenuData.length)*2)/3,ServiceMegaMenuData.length).map((item,index)=>(
                   <div key={index} className="serviceinnercolumninner">
                         <div className="serviceimagecolumn">
-                           <img className="servicecolumnimage" src={item.serviceimage} alt={item.serviceimage} />
+                           <img className="servicecolumnimage" src={item.servicemegamenuimage} alt={item.servicemegamenuimage} />
                         </div>
                         <div className="serviceparacolumn">
                             <p style={{marginBottom:"0"}}>{item.servicename}</p>
