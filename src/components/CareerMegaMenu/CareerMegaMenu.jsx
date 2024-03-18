@@ -29,9 +29,9 @@ const data1 = [
   
   ]
 
-export default function CareerMegaMenu() {
+export default function CareerMegaMenu({isOpen}) {
   return (
-    <div className='careermegamenu'>
+    <div className={`careermegamenu ${isOpen ? 'open' : ''}`}>
     {
             data1.map((item,index)=>(
               <div key={index} className="serviceinnercolumninner">

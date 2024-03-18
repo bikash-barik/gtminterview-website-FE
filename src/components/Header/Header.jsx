@@ -14,6 +14,23 @@ import CareerMegaMenu from '../CareerMegaMenu/CareerMegaMenu';
 const Header = () => {
   const [open, setOpne] = useState(false);
 
+  const [isServiceMenuOpen, setIsServiceMenuOpen] = useState(false);
+  const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
+  const [isCareerMenuOpen, setIsCareerMenuOpen] = useState(false);
+
+  const toggleServiceMenu = () => {
+      setIsServiceMenuOpen(!isServiceMenuOpen);
+  }
+
+  const toggleProductMenu = ()=>{
+    setIsProductMenuOpen(!isProductMenuOpen);
+  }
+
+  const toggleCareerMenu = ()=>{
+    setIsCareerMenuOpen(!isCareerMenuOpen);
+  }
+
+
   return (
     <Box>
       <div className='header'>
@@ -41,20 +58,20 @@ const Header = () => {
             <li className="nav-item">
             <Link to='/about' className="nav-link link" onClick={() => setOpne(false)} > ABOUT US</Link>
             </li>
-            <li className="nav-item servicenavitem">
-              <a href='/services' className="nav-link link" onClick={() => setOpne(false)} >SERVICES<KeyboardArrowDownIcon/></a>
-              <ServicesMegaMenu/>
+            <li className="nav-item servicenavitem" onClick={toggleServiceMenu}>
+              <Link to='/services' className="nav-link link">SERVICES<KeyboardArrowDownIcon/></Link>
+              <ServicesMegaMenu isOpen={isServiceMenuOpen}/>
             </li>
-            <li className="nav-item productnavitem">
-              <Link to="/our-products" className="nav-link link" onClick={() => setOpne(false)} >OUR PRODUCTS<KeyboardArrowDownIcon/></Link>
-              <ProductMegaMenu/>
+            <li className="nav-item productnavitem"  onClick={toggleProductMenu}>
+              <Link to="/our-products" className="nav-link link">OUR PRODUCTS<KeyboardArrowDownIcon/></Link>
+              <ProductMegaMenu  isOpen={isProductMenuOpen}/>
             </li>
             <li className="nav-item">
-              <a href='/contact' className="nav-link link " onClick={() => setOpne(false)} >CONTACT US</a>
+              <Link to='/contact' className="nav-link link " onClick={() => setOpne(false)} >CONTACT US</Link>
             </li>
-            <li className="nav-item careernavitem">
-              <a  href='/career' className="nav-link link">CAREER<KeyboardArrowDownIcon/></a>
-              <CareerMegaMenu/>
+            <li className="nav-item careernavitem"  onClick={toggleCareerMenu}>
+              <Link  to='/career' className="nav-link link">CAREER<KeyboardArrowDownIcon/></Link>
+              <CareerMegaMenu  isOpen={isCareerMenuOpen}/>
             </li>
           </ul>
           {/* </div> */}

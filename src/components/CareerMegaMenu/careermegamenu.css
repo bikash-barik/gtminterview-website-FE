@@ -14,8 +14,25 @@
     transition: visibility 0.5s, opacity 0.5s;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:600px) {
     .careermegamenu{
-        width: 100%;
+        width: 90%;
+        position: relative;
+        display: none;
+        overflow-y: scroll;
+        visibility: visible;
+        opacity: 1;
+        top: 0;
+        left: 0;
     }
+
+    .careermegamenu.open {
+        display: block;
+    }
+
+    .careermegamenu:hover{
+        visibility: initial;
+        opacity: 1;
+      }
+
 }

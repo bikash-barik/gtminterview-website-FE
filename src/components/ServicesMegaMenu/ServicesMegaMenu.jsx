@@ -93,9 +93,9 @@ const data3 = [
     servicename : "Testing (App, Games, Software)"
   },
 ]
-export default function ServicesMegaMenu() {
+export default function ServicesMegaMenu({ isOpen }) {
   return (
-    <div className="service-mega-menu">
+    <div className={`service-mega-menu ${isOpen ? 'open' : ''}`}>
       <div className="servicemegamenurow">
 
         <div className="servicemenu-column1">

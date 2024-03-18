@@ -9,7 +9,7 @@ import dwell from '../../assets/images/nfts-development-1.jpg';
 import silentlearn from '../../assets/images/silentlearn.png';
 import emailhub from '../../assets/images/Email-1536x1024.jpg';
 import gippyservice from '../../assets/images/gippyservice.png';
-import jobimg from "../../assets/images/business-development-manager-job-description-6000x4000-20201126-2048x2048.jpeg";
+// import jobimg from "../../assets/images/business-development-manager-job-description-6000x4000-20201126-2048x2048.jpeg";
 
 const RecentProjectData = [
     {
@@ -120,11 +120,11 @@ export default function RecentProjects() {
         
       </div>
 
+
       <div className="recentprojectrow2">
-      {
-        chunkedData.map((row, rowIndex) => (
-        <div className="recentprojectcardrow" key={rowIndex}>
-          {row.map((item, index) => (
+        <div className="recentprojectcardrow">
+        {
+           data.map((item, index) => (
             <div className="project-card" key={index}>
               <img className="project-image" src={item.imgSrc} alt="Project" />
               <div className="project-details">
@@ -133,8 +133,6 @@ export default function RecentProjects() {
             </div>
           ))}
         </div>
-      ))
-      }
       </div>
     </section>  
   )

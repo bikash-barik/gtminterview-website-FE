@@ -67,9 +67,25 @@
 
  @media screen and (max-width:600px) {
   .service-mega-menu{
-    max-height: 100%;
+    height: 120vh;
     position: relative;
+    display: none;
+    overflow-y: scroll;
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    left: 0;
   }
+
+  .service-mega-menu.open {
+    display: block;
+}
+
+.service-mega-menu:hover{
+  visibility: initial;
+  opacity: 1;
+}
+
   .servicemegamenurow{
     flex-direction: column-reverse;
     width: 100%;
@@ -82,5 +98,6 @@
 
   .servicemenu-column1{
     width: 100%;
+    display: none;
   }
  }
