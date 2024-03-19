@@ -109,7 +109,7 @@ export default function ServicesMegaMenu({ isOpen }) {
   }, []);
 
   const handleServiceClick = (entry) => {
-    navigate(`/service/${entry.servicename}`, { state: { entryData: entry } });
+    navigate(`/service/${entry.id}`);
   };
 
   return (
@@ -124,7 +124,7 @@ export default function ServicesMegaMenu({ isOpen }) {
           <div className="sermenuinnercolumn1">
               {
                 ServiceMegaMenuData.slice(0,(ServiceMegaMenuData.length)/3).map((item,index)=>(
-                  <div key={index} className="serviceinnercolumninner" onClick={handleServiceClick(item)}>
+                  <div key={index} className="serviceinnercolumninner" onClick={() => handleServiceClick(item)}>
                         <div className="serviceimagecolumn">
                            <img className="servicecolumnimage" src={item.servicemegamenuimage} alt={item.servicemegamenuimage} />
                         </div>
@@ -139,7 +139,7 @@ export default function ServicesMegaMenu({ isOpen }) {
           <div className="sermenuinnercolumn1">
           {
                 ServiceMegaMenuData.slice((ServiceMegaMenuData.length)/3,((ServiceMegaMenuData.length)*2)/3).map((item,index)=>(
-                  <div key={index} className="serviceinnercolumninner" onClick={handleServiceClick(item)}>
+                  <div key={index} className="serviceinnercolumninner" onClick={() => handleServiceClick(item)}>
                         <div className="serviceimagecolumn">
                            <img className="servicecolumnimage" src={item.servicemegamenuimage} alt={item.servicemegamenuimage} />
                         </div>
@@ -154,7 +154,7 @@ export default function ServicesMegaMenu({ isOpen }) {
           <div className="sermenuinnercolumn1">
           {
                 ServiceMegaMenuData.slice(((ServiceMegaMenuData.length)*2)/3,ServiceMegaMenuData.length).map((item,index)=>(
-                  <div key={index} className="serviceinnercolumninner" onClick={handleServiceClick(item)}>
+                  <div key={index} className="serviceinnercolumninner" onClick={() => handleServiceClick(item)}>
                         <div className="serviceimagecolumn">
                            <img className="servicecolumnimage" src={item.servicemegamenuimage} alt={item.servicemegamenuimage} />
                         </div>

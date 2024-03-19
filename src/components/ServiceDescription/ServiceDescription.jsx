@@ -12,6 +12,7 @@ const data = {
 
 }
 export default function ServiceDescription({item}) {
+  console.log("data in service description",item);
   return (
     <section className="servicedescriptionsection">
 
@@ -19,7 +20,7 @@ export default function ServiceDescription({item}) {
         <div className="servicedescriptioncolumn1">
           <p className="servicedescriptionpara"  data-aos="fade-up">{item.description1}</p>
           {/* <img className="servicedescriptionimg" src={serviceimg} alt="" /> */}
-          <ServicesName item={item}/>
+          <ServicesName item={item.techUsed}/>
           <p className="servicedescriptionpara" data-aos="fade-up">{item.description2}</p>
           <img className="servicedescriptionimg" src={item.serviceimage} alt="developmentimage" data-aos="fade-up"/>
         </div>

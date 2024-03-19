@@ -5,6 +5,7 @@ const data = {
     heading : "SEO",
 }
 export default function ServiceHerosection({item}) {
+  console.log("item in service hero section",item);
   return (
     <section className='serviceherosection'>
         <div className="serviceherosectionrow">

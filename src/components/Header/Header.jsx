@@ -59,7 +59,7 @@ const Header = () => {
             <Link to='/about' className="nav-link link" onClick={() => setOpne(false)} > ABOUT US</Link>
             </li>
             <li className="nav-item servicenavitem" onClick={toggleServiceMenu}>
-              <Link to='/services' className="nav-link link">SERVICES<KeyboardArrowDownIcon/></Link>
+              <Link className="nav-link link">SERVICES<KeyboardArrowDownIcon/></Link>
               <ServicesMegaMenu isOpen={isServiceMenuOpen}/>
             </li>
             <li className="nav-item productnavitem"  onClick={toggleProductMenu}>
