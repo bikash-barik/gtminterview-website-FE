@@ -9,82 +9,176 @@ import dwell from '../../assets/images/nfts-development-1.jpg';
 import silentlearn from '../../assets/images/silentlearn.png';
 import emailhub from '../../assets/images/Email-1536x1024.jpg';
 import gippyservice from '../../assets/images/gippyservice.png';
+import gardnershub from '../../assets/images/gardnershub.png';
+import iskconpurimain from '../../assets/images/iskconpurimain.png';
+import iskconpuriguesthouse from '../../assets/images/iskconpuriguesthouse.png';
+import iskconpurifood from '../../assets/images/iskconpurifood.png';
+import gosats from '../../assets/images/gosats.png';
+import centurionmetaverse from '../../assets/images/centurionmetaverse.png';
+import gttech from '../../assets/images/gt-tech.png';
+import transparenttech from '../../assets/images/transparent-tech.png';
+import writeup from '../../assets/images/writeup.png';
+import tanumanasa from '../../assets/images/tanumanasa.png';
 // import jobimg from "../../assets/images/business-development-manager-job-description-6000x4000-20201126-2048x2048.jpeg";
 
-const RecentProjectData = [
-    {
-      imgSrc: apnaapp,
-      heading: 'AppnaApp',
-      para: 'We have always been in the race to identify innovation before it reaches us from elsewhere. Our engagement with blockchain technology started years ago and today we have successfully helped our customers to implement mass scale blockchain-powered business ecosystems for their end consumers.',
-      btnText: 'View Full Details',
-    },
-    {
-      imgSrc: gmtimg,
-      heading: 'GlowTechmor',
-      para: 'We have always been in the race to identify innovation before it reaches us from elsewhere. Our engagement with blockchain technology started years ago and today we have successfully helped our customers to implement mass scale blockchain-powered business ecosystems for their end consumers.',
-      btnText: 'View Full Details',
-    },
-    {
-      imgSrc: techmor3d,
-      heading: '3D Techmor',
-      para: 'We have always been in the race to identify innovation before it reaches us from elsewhere. Our engagement with blockchain technology started years ago and today we have successfully helped our customers to implement mass scale blockchain-powered business ecosystems for their end consumers.',
-      btnText: 'View Full Details',
-    },
+const RecentAIProjectData = [
     {
       imgSrc: aiwriter,
       heading: 'AI Writor',
-      para: 'We have always been in the race to identify innovation before it reaches us from elsewhere. Our engagement with blockchain technology started years ago and today we have successfully helped our customers to implement mass scale blockchain-powered business ecosystems for their end consumers.',
+      link : 'https://writeup.ai/',
       btnText: 'View Full Details',
     },
     {
-      imgSrc: dwell,
-      heading: 'DWELL',
-      para: 'We have always been in the race to identify innovation before it reaches us from elsewhere. Our engagement with blockchain technology started years ago and today we have successfully helped our customers to implement mass scale blockchain-powered business ecosystems for their end consumers.',
+      imgSrc: writeup,
+      heading: 'Write Up',
+      link : 'https://writeup.ai/',
       btnText: 'View Full Details',
     },
     {
-      imgSrc: silentlearn,
-      heading: 'SilentLearn',
-      para: 'We have always been in the race to identify innovation before it reaches us from elsewhere. Our engagement with blockchain technology started years ago and today we have successfully helped our customers to implement mass scale blockchain-powered business ecosystems for their end consumers.',
-      btnText: 'View Full Details',
-    },
-    {
-      imgSrc: emailhub,
-      heading: 'EMAIL-HUB',
-      para: 'We have always been in the race to identify innovation before it reaches us from elsewhere. Our engagement with blockchain technology started years ago and today we have successfully helped our customers to implement mass scale blockchain-powered business ecosystems for their end consumers.',
-      btnText: 'View Full Details',
-    },
-    {
-      imgSrc: gippyservice,
-      heading: 'GIPPY SERVICE',
-      para: 'We have always been in the race to identify innovation before it reaches us from elsewhere. Our engagement with blockchain technology started years ago and today we have successfully helped our customers to implement mass scale blockchain-powered business ecosystems for their end consumers.',
+      imgSrc: tanumanasa,
+      heading: 'Tanumanasa',
+      link: 'https://tanumanasa.com/',
       btnText: 'View Full Details',
     },
   
   ];
 
+  const RecentBlockChainProjectData = [
+    {
+      imgSrc: apnaapp,
+      heading: 'AppnaApp',
+      link: 'http://appnaapp.com/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: gmtimg,
+      heading: 'GlowTechmor',
+      link: 'https://glowtechmor.com/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: techmor3d,
+      heading: '3D Techmor',
+      link: '/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: dwell,
+      heading: 'DWELL',
+      link: '/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: silentlearn,
+      heading: 'SilentLearn',
+      link: '/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: emailhub,
+      heading: 'EMAIL-HUB',
+      link: '/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: gippyservice,
+      heading: 'GIPPY SERVICE',
+      link: 'https://gippyservice.com/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: gardnershub,
+      heading: 'GARDNERS-HUB',
+      link: 'https://thegardenershub.com/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: iskconpurimain,
+      heading: 'ISKCON PURI',
+      link: 'https://www.iskconpuri.com/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: iskconpuriguesthouse,
+      heading: 'ISKCON PURI GUEST-HOUSE',
+      link: 'https://www.iskconpuri.in/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: iskconpurifood,
+      heading: 'ISKCON PURI FOOD FOR LIFE',
+      link: 'https://iskconpuri.org/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: gippyservice,
+      heading: 'EXRAMA',
+      link: 'https://exrama.com/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: gosats,
+      heading: 'GOSATS',
+      link: 'https://gosats.io/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: gosats,
+      heading: 'Vichayan',
+      link: 'https://gosats.io/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: gosats,
+      heading: 'The Point0',
+      link: 'https://gosats.io/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: centurionmetaverse,
+      heading: 'CENTURION METAVERSE',
+      link: 'https://cutm-metaverse.vercel.app/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: gttech,
+      heading: 'GT TECH',
+      link: 'https://gaming-35085.web.app/',
+      btnText: 'View Full Details',
+    },
+    {
+      imgSrc: transparenttech,
+      heading: 'TRANSPARENT TECH',
+      link: 'https://devtransparenttech.web.app/',
+      btnText: 'View Full Details',
+    },
+  
+  ];
+
+
+
 export default function RecentProjects() {
-    const [data, setData] = useState(RecentProjectData);
+    const [data, setData] = useState(RecentAIProjectData);
     const [isAISelected, setIsAISelected] = useState(true);
     const [isBlockChainSelected, setBlockChainSelected] = useState(false);
     const [isProgrammingSelected, setProgrammingSelected] = useState(false);
 
     const handleAISectionClick = () => {
-      setData(RecentProjectData);
+      setData(RecentAIProjectData);
       setIsAISelected(!isAISelected);
       setBlockChainSelected(false);
       setProgrammingSelected(false);
     };
 
     const handleBlockChainSectionClick = () => {
-        setData(RecentProjectData);
+        setData(RecentBlockChainProjectData);
         setIsAISelected(false);
         setBlockChainSelected(!isBlockChainSelected);
         setProgrammingSelected(false);
     };
       
     const handleProgrammingSectionClick = () => {
-        setData(RecentProjectData);
+        setData(RecentBlockChainProjectData);
         setIsAISelected(false);
         setBlockChainSelected(false);
         setProgrammingSelected(!isProgrammingSelected);
@@ -125,12 +219,12 @@ export default function RecentProjects() {
         <div className="recentprojectcardrow">
         {
            data.map((item, index) => (
-            <div className="project-card" key={index}>
+            <a href={item.link} className="project-card" key={index}>
               <img className="project-image" src={item.imgSrc} alt="Project" />
               <div className="project-details">
                 <p className="project-title">{item.heading}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
