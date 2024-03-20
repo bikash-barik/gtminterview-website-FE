@@ -86,4 +86,8 @@
     .recentprojectcardrow{
         flex-direction: column;
     }
+
+    .project-card{
+      max-width: 100%;
+    }
   }
