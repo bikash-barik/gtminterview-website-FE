@@ -4,6 +4,10 @@
 
 .typho-1 > a{
     text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white !important;
 }
 
@@ -71,10 +75,10 @@
 }
 
 .headersecond{
-    width: 30%;
+    width: 40%;
     display: flex;
     gap: 30px;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     padding: 0 10px;
 }
 
@@ -86,7 +90,7 @@
   .marquee-container {
     overflow: hidden;
     white-space: nowrap;
-    width: 70%;
+    width: 65%;
     display: flex;
     align-items: center;
     justify-content: center;

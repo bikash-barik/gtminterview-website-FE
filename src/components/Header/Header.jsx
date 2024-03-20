@@ -2,6 +2,7 @@ import { Box} from '@mui/material'
 import React,{useState} from 'react'
 import HeadsetIcon from '@mui/icons-material/Headset';
 import EmailIcon from '@mui/icons-material/Email';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import logo from "../../assets/images/gtm-1.png"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { IoMdMenu } from "react-icons/io";
@@ -40,6 +41,7 @@ const Header = () => {
         <div className="headersecond">
         <div className='typho-1' ><HeadsetIcon /><a className='headerancher' href="tel:7978332292"> +91 7978332292</a></div>
         <div className='typho-1'><EmailIcon />info@glowtechmor.com</div>
+        <div className='typho-1'><Link to="https://crm.glowtechmor.com/"><AccountCircleIcon /></Link></div>
         </div>
        
       </div>
