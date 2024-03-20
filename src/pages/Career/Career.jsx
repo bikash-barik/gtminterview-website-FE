@@ -33,16 +33,16 @@ const jobsData = [
 ];
 
 const internshipsData = [
-  // {
-  //   jobimage: jobimg,
-  //   jobtitle: "Business Development Manager",
-  //   jobdescription: "Looking for Business Development Manager",
-  // },
-  // {
-  //   jobimage: jobimg,
-  //   jobtitle: "User Interface (UI) Designer",
-  //   jobdescription: "Looking for User Interface (UI) Designer",
-  // },
+  {
+    jobimage: jobimg,
+    jobtitle: "Business Development Manager Intern",
+    jobdescription: "Looking for Business Development Manager Intern",
+  },
+  {
+    jobimage: jobimg,
+    jobtitle: "User Interface (UI) Designer Intern",
+    jobdescription: "Looking for User Interface (UI) Designer Intern",
+  },
 ];
 
 

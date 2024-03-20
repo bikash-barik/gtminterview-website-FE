@@ -8,6 +8,7 @@ import silentlearn from '../../assets/images/silentlearn.png';
 import emailhub from '../../assets/images/Email-1536x1024.jpg';
 import gippyservice from '../../assets/images/gippyservice.png';
 import gmtimg from '../../assets/images/gtm-1536x692.png';
+import { Link } from 'react-router-dom';
 
 const data1 = [
     {
@@ -50,16 +51,16 @@ export default function ProductMegaMenu({isOpen}) {
     <div className={`productmegamenu ${isOpen ? 'open' : ''}`}>
         {
                 data1.map((item,index)=>(
-                  <div key={index} className="serviceinnercolumninner">
+                  <Link key={index} to="/our-products" className="serviceinnercolumninner" >
                         <div className="serviceimagecolumn">
                            <img className="servicecolumnimage" src={item.productimage} alt={item.productimage} />
                         </div>
                         <div className="serviceparacolumn">
                             <p style={{marginBottom:"0"}}>{item.productname}</p>
                         </div>
-                  </div>
+                  </Link>
                 ))
-              }
+        }
     </div>
   )
 }

@@ -93,6 +93,7 @@ const data1 = [
 export default function ServicesMegaMenu({ isOpen }) {
   const navigate = useNavigate();
   const[ServiceMegaMenuData,setServiceMegaMenuData]=useState([]);
+  const [closeMenu, setcloseMenu] = useState(false);
 
   useEffect(() => {
     const firestore = firebase.firestore();
@@ -109,11 +110,12 @@ export default function ServicesMegaMenu({ isOpen }) {
   }, []);
 
   const handleServiceClick = (entry) => {
+    setcloseMenu(true);
     navigate(`/service/${entry.id}`);
   };
 
   return (
-    <div className={`service-mega-menu ${isOpen ? 'open' : ''}`}>
+    <div className={`service-mega-menu ${isOpen ? 'open' : ''}`} style={{ visibility: closeMenu ? "hidden" : "", opacity: closeMenu ? 0 : "" }} >
       <div className="servicemegamenurow">
 
         <div className="servicemenu-column1">
@@ -148,7 +150,7 @@ export default function ServicesMegaMenu({ isOpen }) {
                         </div>
                   </div>
                 ))
-              }
+          }
           </div>
 
           <div className="sermenuinnercolumn1">
