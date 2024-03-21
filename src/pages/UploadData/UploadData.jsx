@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebaseConfig";
 import "./uploaddata.css";
 import UploadServices from "../../components/UploadServices/UploadServices";
+import UploadJob from "../../components/UploadJob/UploadJob";
 // import loadingImage from '../assets/hotelbookingreloader.gif';
 // import prasadamgalleryimage from '../assets/prasadamgalleryimage.png';
 
@@ -24,8 +25,6 @@ const UploadData = () => {
         text: messageText,
       });
   }
-
-  
   
   const handleLogout = () => {
     auth.signOut().then(() => {
@@ -61,6 +60,8 @@ const UploadData = () => {
         </div>
 
         <UploadServices setLoadingState={setLoadingState} setLoadingMessage={setLoadingMessage} />
+
+        <UploadJob setLoadingState={setLoadingState} setLoadingMessage={setLoadingMessage} />
 
         </div>
     }

@@ -1,62 +1,59 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./career.css";
-import jobimg from "../../assets/images/business-development-manager-job-description-6000x4000-20201126-2048x2048.jpeg";
+// import jobimg from "../../assets/images/business-development-manager-job-description-6000x4000-20201126-2048x2048.jpeg";
 import { FaChevronDown } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
-const jobsData = [
-  {
-    jobimage: jobimg,
-    jobtitle: "Business Development Manager",
-    jobdescription: "Looking for Business Development Manager",
-  },
-  {
-    jobimage: jobimg,
-    jobtitle: "User Interface (UI) Designer",
-    jobdescription: "Looking for User Interface (UI) Designer",
-  },
-  {
-    jobimage: jobimg,
-    jobtitle: "React Native developer",
-    jobdescription: "Looking for React Native developer",
-  },
-  {
-    jobimage: jobimg,
-    jobtitle: "Flutter Developer",
-    jobdescription: "Looking for Flutter Developer",
-  },
-  {
-    jobimage: jobimg,
-    jobtitle: "MERN(Mongodb Express ReactJs NodeJs ) stack developers",
-    jobdescription:"Looking for MERN(Mongodb Express ReactJs NodeJs ) stack developers",
-  },
-];
+// const jobsData = [
+//   {
+//     jobimage: jobimg,
+//     jobtitle: "Business Development Manager",
+//     jobdescription: "Looking for Business Development Manager",
+//   },
+//   {
+//     jobimage: jobimg,
+//     jobtitle: "User Interface (UI) Designer",
+//     jobdescription: "Looking for User Interface (UI) Designer",
+//   },
+//   {
+//     jobimage: jobimg,
+//     jobtitle: "React Native developer",
+//     jobdescription: "Looking for React Native developer",
+//   },
+//   {
+//     jobimage: jobimg,
+//     jobtitle: "Flutter Developer",
+//     jobdescription: "Looking for Flutter Developer",
+//   },
+//   {
+//     jobimage: jobimg,
+//     jobtitle: "MERN(Mongodb Express ReactJs NodeJs ) stack developers",
+//     jobdescription:"Looking for MERN(Mongodb Express ReactJs NodeJs ) stack developers",
+//   },
+// ];
 
-const internshipsData = [
-  {
-    jobimage: jobimg,
-    jobtitle: "Business Development Manager Intern",
-    jobdescription: "Looking for Business Development Manager Intern",
-  },
-  {
-    jobimage: jobimg,
-    jobtitle: "User Interface (UI) Designer Intern",
-    jobdescription: "Looking for User Interface (UI) Designer Intern",
-  },
-];
+// const internshipsData = [
+//   {
+//     jobimage: jobimg,
+//     jobtitle: "Business Development Manager Intern",
+//     jobdescription: "Looking for Business Development Manager Intern",
+//   },
+//   {
+//     jobimage: jobimg,
+//     jobtitle: "User Interface (UI) Designer Intern",
+//     jobdescription: "Looking for User Interface (UI) Designer Intern",
+//   },
+// ];
 
 
 
 export default function Career() {
     const [openIndexes, setOpenIndexes] = useState([]);
-    const [data, setData] = useState(jobsData); // Initialize with jobs data
     const [isInternshipSelected, setIsInternshipSelected] = useState(false);
   
-    const handleSectionClick = () => {
-      setData(isInternshipSelected ? jobsData : internshipsData);
-      setIsInternshipSelected(!isInternshipSelected);
-    };
-    
+
   const toggleAccordion = (index) => {
     const updatedIndexes = [...openIndexes];
     const indexPosition = updatedIndexes.indexOf(index);
@@ -69,6 +66,39 @@ export default function Career() {
 
     setOpenIndexes(updatedIndexes);
   };
+
+const [jobOpeningsData,setjobOpeningsData] = useState([]);
+const [internshipOpeningsData,setinternshipOpeningsData] = useState([]);
+const [openingPositionsData, setopeningPositionsData] = useState(jobOpeningsData);
+
+
+useEffect(() => {
+  const firestore = firebase.firestore();
+  const contentDataRef = firestore.collection("openingpositionsData");
+  const unsubscribe = contentDataRef.onSnapshot((snapshot) => {
+    const newContentData = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    console.log("Opening Position Data",newContentData);
+
+    const filteredJobData = newContentData.filter(data => data.openingpositionType === "Job");
+    setjobOpeningsData(filteredJobData);
+    setopeningPositionsData(filteredJobData)
+
+    const filteredInternshipData = newContentData.filter(data => data.openingpositionType === "Internship");
+    setinternshipOpeningsData(filteredInternshipData)
+
+  });
+  return () => unsubscribe();
+}, []);
+
+const handleSectionClick = () => {
+  setopeningPositionsData(isInternshipSelected ? jobOpeningsData : internshipOpeningsData)
+  setIsInternshipSelected(!isInternshipSelected);
+};
+
+
 
   return (
     <section className="careersection">
@@ -85,17 +115,17 @@ export default function Career() {
       </div>
 
       <div className="careerrow2">
-        { data.length > 0 ?
-        data.map((item, index) => (
+        { openingPositionsData.length > 0 ?
+        openingPositionsData.map((item, index) => (
           <div className="careerrow2innerrow" data-aos="fade-up">
             <div className="careerrow2innerrow1">
               <div className="careerinnercolumn1">
-                <img className="careerimg" src={item.jobimage} alt="jobimage" />
+                <img className="careerimg" src={item.openingpositionimage} alt="jobimage" />
               </div>
 
               <div className="careerinnercolumn2">
-                <h2 className="careerheading">{item.jobtitle}</h2>
-                <p>{item.jobdescription}</p>
+                <h2 className="careerheading">{item.openingpositionTitle}</h2>
+                <p>{item.openingpositionDescription}</p>
               </div>
 
               <div className="careerinnercolumn3">

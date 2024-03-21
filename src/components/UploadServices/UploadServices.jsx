@@ -51,7 +51,7 @@ export default function UploadServices({ setLoadingState,setLoadingMessage }) {
           }
     
           setLoadingState(true)
-          setLoadingMessage("success","Please wait until your data is submitted!...");
+          setLoadingMessage("","Please wait until your data is submitted!...");
     
           const firestore = firebase1.firestore();
           const storage = firebase1.storage();
@@ -165,7 +165,7 @@ export default function UploadServices({ setLoadingState,setLoadingMessage }) {
     </div>
 
     <div className="uploadimagecolumn">
-      <img className="uploadimageimage" src="/" alt="prasadamgalleryimage"></img>
+      <img className="uploadimageimage" src="/" alt="serviceimage"></img>
     </div>
 
   </div>
