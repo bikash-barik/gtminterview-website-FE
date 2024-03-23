@@ -5,7 +5,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-
+import { useParams } from "react-router-dom";
 // const jobsData = [
 //   {
 //     jobimage: jobimg,
@@ -50,6 +50,8 @@ import "firebase/compat/firestore";
 
 
 export default function Career() {
+  const {opening} = useParams();
+
     const [openIndexes, setOpenIndexes] = useState([]);
     const [isInternshipSelected, setIsInternshipSelected] = useState(false);
   
@@ -84,10 +86,19 @@ useEffect(() => {
 
     const filteredJobData = newContentData.filter(data => data.openingpositionType === "Job");
     setjobOpeningsData(filteredJobData);
-    setopeningPositionsData(filteredJobData)
 
     const filteredInternshipData = newContentData.filter(data => data.openingpositionType === "Internship");
-    setinternshipOpeningsData(filteredInternshipData)
+    setinternshipOpeningsData(filteredInternshipData);
+
+    if(opening === "jobs"){
+      setopeningPositionsData(filteredJobData)
+    }
+    
+    if(opening === "internship"){
+      setopeningPositionsData(filteredInternshipData);
+      setIsInternshipSelected(!isInternshipSelected);
+    }
+   
 
   });
   return () => unsubscribe();

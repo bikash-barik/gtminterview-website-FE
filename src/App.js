@@ -46,9 +46,9 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<AboutUs/>} />
           <Route path='/service/:id' element={<Service/>}/>
-          <Route path='/our-products' element={<OurProducts/>}/>
+          <Route path='/our-products/:section' element={<OurProducts/>}/>
           <Route path='/contact' element={<Contact/>}/>
-          <Route path='/career' element={<Career/>}/>
+          <Route path='/career/:opening' element={<Career/>}/>
           <Route path='/hiring-process' element={<HiringProcess/>}/>
           <Route path='/verify-certificate' element={<VerifyCertificate/>}/>
           <Route path='/signup' element={<SignUp/>}/>

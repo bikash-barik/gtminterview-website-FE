@@ -65,14 +65,14 @@ const Header = () => {
               <ServicesMegaMenu isOpen={isServiceMenuOpen}/>
             </li>
             <li className="nav-item productnavitem"  onClick={toggleProductMenu}>
-              <Link to="/our-products" className="nav-link link">OUR PRODUCTS<KeyboardArrowDownIcon/></Link>
+              <Link to="/our-products/products" className="nav-link link">OUR PRODUCTS<KeyboardArrowDownIcon/></Link>
               <ProductMegaMenu  isOpen={isProductMenuOpen}/>
             </li>
             <li className="nav-item">
               <Link to='/contact' className="nav-link link " onClick={() => setOpne(false)} >CONTACT US</Link>
             </li>
             <li className="nav-item careernavitem"  onClick={toggleCareerMenu}>
-              <Link  to='/career' className="nav-link link">CAREER<KeyboardArrowDownIcon/></Link>
+              <Link  to='/career/jobs' className="nav-link link">CAREER<KeyboardArrowDownIcon/></Link>
               <CareerMegaMenu  isOpen={isCareerMenuOpen}/>
             </li>
           </ul>

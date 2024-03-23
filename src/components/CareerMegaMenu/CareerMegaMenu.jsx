@@ -9,12 +9,12 @@ const data1 = [
     {
       careerimage : job,
       careername : "Jobs",
-      careerpage :"/career"
+      careerpage :"/career/jobs"
     },
     {
       careerimage:intern,
       careername : "Internship",
-      careerpage : "/career"
+      careerpage : "/career/internship"
     },
     {
       careerimage : verify,
@@ -27,7 +27,7 @@ const data1 = [
       careerpage : "/hiring-process"
     }
   
-  ]
+]
 
 export default function CareerMegaMenu({isOpen}) {
   return (

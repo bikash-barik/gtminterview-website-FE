@@ -13,35 +13,43 @@ import { Link } from 'react-router-dom';
 const data1 = [
     {
       productimage : apnaapp,
-      productname : "AppnaApp"
+      productname : "AppnaApp",
+      productid:"appnaapp"
     },
     {
       productimage : silentlearn,
-      productname : "SilentLearn"
+      productname : "SilentLearn",
+      productid:"silentlearn"
     },
     {
       productimage : techmor3d,
-      productname : "3DTechMor"
+      productname : "3DTechMor",
+      productid : "techmor3d"
     },
     {
       productimage : gmtimg,
-      productname : "GMT"
+      productname : "GMT",
+      productid : "gmt"
     },
     {
       productimage : aiwriter,
-      productname : "AiWritor"
+      productname : "AiWritor",
+      productid : "aiwriter"
     },
     {
       productimage : dwell,
-      productname : "DWELL"
+      productname : "DWELL",
+      productid : "dwell"
     },
     {
       productimage : emailhub,
-      productname : "EMAIL-HUB"
+      productname : "EMAIL-HUB",
+      productid : "email-hub"
     },
     {
       productimage : gippyservice,
-      productname : "GIPPY SERVICE"
+      productname : "GIPPY SERVICE",
+      productid : "gippy-service"
     },
   
   ]
@@ -51,7 +59,7 @@ export default function ProductMegaMenu({isOpen}) {
     <div className={`productmegamenu ${isOpen ? 'open' : ''}`}>
         {
                 data1.map((item,index)=>(
-                  <Link key={index} to="/our-products" className="serviceinnercolumninner" >
+                  <Link key={index} to={`/our-products/${item.productid}`} className="serviceinnercolumninner" >
                         <div className="serviceimagecolumn">
                            <img className="servicecolumnimage" src={item.productimage} alt={item.productimage} />
                         </div>

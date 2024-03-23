@@ -59,25 +59,25 @@ const RecentAIProjectData = [
     {
       imgSrc: techmor3d,
       heading: '3D Techmor',
-      link: '/',
+      link: 'https://gaming-35085.web.app/',
       btnText: 'View Full Details',
     },
     {
       imgSrc: dwell,
       heading: 'DWELL',
-      link: '/',
+      link: 'https://opensea.io/',
       btnText: 'View Full Details',
     },
     {
       imgSrc: silentlearn,
       heading: 'SilentLearn',
-      link: '/',
+      link: 'https://courses.techmentorcore.com/',
       btnText: 'View Full Details',
     },
     {
       imgSrc: emailhub,
       heading: 'EMAIL-HUB',
-      link: '/',
+      link: 'https://email-sand-1-2-front-end.vercel.app/',
       btnText: 'View Full Details',
     },
     {
