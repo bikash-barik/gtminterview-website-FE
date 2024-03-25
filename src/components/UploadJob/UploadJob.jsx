@@ -84,48 +84,53 @@ export default function Uploadopeningposition({ setLoadingState,setLoadingMessag
       <div className="uploadimagecolumninnerdiv">
         <h3 className="mb-8 text-center font-bold text-2xl">Opening position</h3>
 
-        <div className="uploadimageinputdiv">
+        <div className="uploaddatadiv">
+            <div className="uploadimageinputdiv">
              <label htmlFor="">openingposition Image</label>
              <input type="file" onChange={handleFileChange} />
-        </div>
+            </div>
 
-        <div className="uploadimageinputdiv">
+             <div className="uploadimageinputdiv">
              <label htmlFor="">Opening position Type</label>
              <select name="" id="" onChange={(e) => setopeningpositionType(e.target.value)}>
               <option value="">Select Opening Type</option>
               <option value="Job">Job</option>
               <option value="Internship">Internship</option>
              </select>
+            </div>
         </div>
+        
 
-
-        <div className="uploadimageinputdiv">
+      <div className="uploaddatadiv">
+            <div className="uploadimageinputdiv">
              <label htmlFor="">openingposition Title</label>
              <input type="text" required placeholder='Please Enter openingposition Title....'  value={openingpositionTitle} onChange={(e) => setopeningpositionTitle(e.target.value)}/>
-        </div>
+            </div>
 
-        <div className="uploadimageinputdiv">
+            <div className="uploadimageinputdiv">
              <label htmlFor="">openingposition Description</label>
              <textarea type="text" required placeholder='Please Enter openingposition Description....'  value={openingpositionDescription} onChange={(e) => setopeningpositionDescription(e.target.value)}/>
-        </div>
-
-        {Array.from({ length: 10 }, (_, index) => (
-        <div key={index} className='mappedimagesdiv'>
-          <input
-            type="text"
-            required
-            value={textInputs[index]}
-            onChange={(e) => handleTextChange(index, e.target.value)}
-            placeholder="Enter openingposition Description Points"
-          />
+            </div>
+      </div>
+        
+      <div className="uploaddatadiv">
+        <div className="uploadimageinputdiv">
+        {Array.from({ length: 5 }, (_, index) => (
+        <div key={index}>
+          <input type="text" required value={textInputs[index]} onChange={(e) => handleTextChange(index, e.target.value)} placeholder="Enter openingposition Description Points"/>
         </div>
       ))}
-
-        <div className="uploadimageinputdiv">
-             <label htmlFor="">openingposition Link</label>
-             <input type="text" required placeholder='Please Enter openingposition Link....'  value={openingpositionLink} onChange={(e) => setopeningpositionLink(e.target.value)}/>
         </div>
-
+      
+        <div className="uploadimageinputdiv">
+        {Array.from({ length: 5 }, (_, index) => (
+        <div key={index}>
+          <input type="text" required value={textInputs[index]} onChange={(e) => handleTextChange(index, e.target.value)} placeholder="Enter openingposition Description Points"/>
+        </div>
+      ))}
+        </div>
+      </div>
+      
         <button className="uploadimagebtn" onClick={handleUploadopeningpositions} style={{ marginTop: "5px", borderRadius: "5px" }}>Upload</button>
       </div>
     </div>

@@ -102,7 +102,7 @@ useEffect(() => {
 
   });
   return () => unsubscribe();
-}, []);
+}, [isInternshipSelected,opening]);
 
 const handleSectionClick = () => {
   setopeningPositionsData(isInternshipSelected ? jobOpeningsData : internshipOpeningsData)

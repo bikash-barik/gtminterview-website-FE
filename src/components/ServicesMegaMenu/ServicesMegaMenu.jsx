@@ -17,8 +17,8 @@ import servicemegamenuimg from "../../assets/images/servicemegamenuimg.png";
 // import graphicdesign from '../../assets/images/graphic-design.png';
 // import videoandanimation from '../../assets/images/videoandanimation.png';
 // import testing from '../../assets/images/testing.png';
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 
@@ -91,9 +91,9 @@ import "firebase/compat/firestore";
 // ]
 
 export default function ServicesMegaMenu({ isOpen }) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const[ServiceMegaMenuData,setServiceMegaMenuData]=useState([]);
-  const [closeMenu, setcloseMenu] = useState(false);
+  // const [closeMenu, setcloseMenu] = useState(false);
 
   useEffect(() => {
     const firestore = firebase.firestore();
@@ -109,10 +109,10 @@ export default function ServicesMegaMenu({ isOpen }) {
     return () => unsubscribe();
   }, []);
 
-  const handleServiceClick = () => {
-    setcloseMenu(true);
+  // const handleServiceClick = () => {
+    // setcloseMenu(true);
     // navigate(`/service/${entry.id}`);
-  };
+  // };
 
   return (
     <div className={`service-mega-menu ${isOpen ? 'open' : ''}`} >
@@ -126,7 +126,7 @@ export default function ServicesMegaMenu({ isOpen }) {
           <div className="sermenuinnercolumn1">
               {
                 ServiceMegaMenuData.slice(0,(ServiceMegaMenuData.length)/3).map((item,index)=>(
-                  <a href={`/service/${item.id}`} key={index} className="serviceinnercolumninner" onClick={() => handleServiceClick()}>
+                  <a href={`/service/${item.id}`} key={index} className="serviceinnercolumninner">
                         <div className="serviceimagecolumn">
                            <img className="servicecolumnimage" src={item.servicemegamenuimage} alt={item.servicemegamenuimage} />
                         </div>
@@ -141,7 +141,7 @@ export default function ServicesMegaMenu({ isOpen }) {
           <div className="sermenuinnercolumn1">
           {
                 ServiceMegaMenuData.slice((ServiceMegaMenuData.length)/3,((ServiceMegaMenuData.length)*2)/3).map((item,index)=>(
-                  <a href={`/service/${item.id}`} key={index} className="serviceinnercolumninner" onClick={() => handleServiceClick()}>
+                  <a href={`/service/${item.id}`} key={index} className="serviceinnercolumninner" >
                         <div className="serviceimagecolumn">
                            <img className="servicecolumnimage" src={item.servicemegamenuimage} alt={item.servicemegamenuimage} />
                         </div>
@@ -156,7 +156,7 @@ export default function ServicesMegaMenu({ isOpen }) {
           <div className="sermenuinnercolumn1">
           {
                 ServiceMegaMenuData.slice(((ServiceMegaMenuData.length)*2)/3,ServiceMegaMenuData.length).map((item,index)=>(
-                  <a href={`/service/${item.id}`} key={index} className="serviceinnercolumninner" onClick={() => handleServiceClick(item)}>
+                  <a href={`/service/${item.id}`} key={index} className="serviceinnercolumninner">
                         <div className="serviceimagecolumn">
                            <img className="servicecolumnimage" src={item.servicemegamenuimage} alt={item.servicemegamenuimage} />
                         </div>

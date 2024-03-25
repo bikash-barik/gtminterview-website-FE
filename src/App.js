@@ -18,6 +18,7 @@ import VerifyCertificate from './pages/VerifyCertificate/VerifyCertificate.jsx';
 import Login from './pages/Login/Login.jsx';
 import SignUp from './pages/Signup/Signup.jsx';
 import UploadData from './pages/UploadData/UploadData.jsx';
+import Certificate from './components/Certificate/Certificate.jsx';
 // import ParticleComponent from './components/ParticleComponent/ParticleComponent';
 const isAuthenticated = () => {
   const currentUser = firebase.auth().currentUser;
@@ -53,7 +54,9 @@ function App() {
           <Route path='/verify-certificate' element={<VerifyCertificate/>}/>
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/certi' element={<Certificate/>}/>
           <Route path='/upload' element={<ProtectedRoute element={<UploadData/>} />}/>
+
         </Routes>
         <Footer/>
       </BrowserRouter>

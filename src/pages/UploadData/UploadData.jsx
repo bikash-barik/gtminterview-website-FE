@@ -6,6 +6,7 @@ import { auth } from "../../firebaseConfig";
 import "./uploaddata.css";
 import UploadServices from "../../components/UploadServices/UploadServices";
 import UploadJob from "../../components/UploadJob/UploadJob";
+import UploadEmployeeData from "../../components/UploadEmployeeData/UploadEmployeeData";
 // import loadingImage from '../assets/hotelbookingreloader.gif';
 // import prasadamgalleryimage from '../assets/prasadamgalleryimage.png';
 
@@ -62,6 +63,8 @@ const UploadData = () => {
         <UploadServices setLoadingState={setLoadingState} setLoadingMessage={setLoadingMessage} />
 
         <UploadJob setLoadingState={setLoadingState} setLoadingMessage={setLoadingMessage} />
+
+        <UploadEmployeeData setLoadingState={setLoadingState} setLoadingMessage={setLoadingMessage} />
 
         </div>
     }

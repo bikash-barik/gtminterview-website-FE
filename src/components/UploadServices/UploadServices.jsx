@@ -117,48 +117,53 @@ export default function UploadServices({ setLoadingState,setLoadingMessage }) {
       <div className="uploadimagecolumninnerdiv">
         <h3 className="mb-8 text-center font-bold text-2xl">Services </h3>
 
-        <div className="uploadimageinputdiv">
-             <label htmlFor="">Service Mega Menu Image</label>
-             <input type="file" multiple onChange={handleFileChange} />
-        </div>
-
-        <div className="uploadimageinputdiv">
+        <div className="uploaddatadiv">
+           <div className="uploadimageinputdiv">
+               <label htmlFor="">Service Mega Menu Image</label>
+               <input type="file" multiple onChange={handleFileChange} />
+           </div>
+          
+           <div className="uploadimageinputdiv">
              <label htmlFor="">Service Name</label>
              <input type="text" placeholder='Please Enter Service Name....'  value={serviceName} onChange={(e) => setServiceName(e.target.value)}/>
+          </div>
         </div>
-
-        <div className="uploadimageinputdiv">
+      
+        <div className="uploaddatadiv">
+            <div className="uploadimageinputdiv">
              <label htmlFor="">Service Description Paragraph 1</label>
              <textarea type="text" placeholder='Please Enter Service Description....'  value={description1} onChange={(e) => setDescription1(e.target.value)}/>
-        </div>
+            </div>
 
-        <div className="uploadimageinputdiv">
+            <div className="uploadimageinputdiv">
              <label htmlFor="">Service Description Paragraph 2</label>
              <textarea type="text" placeholder='Please Enter Service Description....'  value={description2} onChange={(e) => setDescription2(e.target.value)}/>
+            </div>
         </div>
 
-        <div className="uploadimageinputdiv">
+        <div className="uploaddatadiv">
+            <div className="uploadimageinputdiv">
              <label htmlFor="">Tech Used</label>
              <input type="file" multiple onChange={handleServicesFileChange} />
-        </div>
 
-        {images.map((image, index) => (
-        <div key={index} className='mappedimagesdiv'>
-          <img className='mappedimages' src={image} alt={`Image ${index}`} />
-          <input
-            type="text"
-            value={textInputs[index]}
-            onChange={(e) => handleTextChange(index, e.target.value)}
-            placeholder="Enter some text"
-          />
-        </div>
-      ))}
-
-        <div className="uploadimageinputdiv">
+             {images.map((image, index) => (
+               <div key={index} className='mappedimagesdiv'>
+               <img className='mappedimages' src={image} alt={`Image ${index}`} />
+               <input
+                 type="text"
+                 value={textInputs[index]}
+                 onChange={(e) => handleTextChange(index, e.target.value)}
+                 placeholder="Enter some text"
+               />
+              </div>
+              ))}
+             </div>
+             
+           <div className="uploadimageinputdiv">
              <label htmlFor="">Service Image</label>
              <input type="file" multiple onChange={handleFileChange1} />
+           </div>
         </div>
-
 
         <button className="uploadimagebtn" onClick={handleUploadServices} style={{ marginTop: "5px", borderRadius: "5px" }}>Upload</button>
       </div>
