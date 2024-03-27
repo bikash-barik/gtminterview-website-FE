@@ -19,7 +19,9 @@ import Login from './pages/Login/Login.jsx';
 import SignUp from './pages/Signup/Signup.jsx';
 import UploadData from './pages/UploadData/UploadData.jsx';
 import Certificate from './components/Certificate/Certificate.jsx';
-// import ParticleComponent from './components/ParticleComponent/ParticleComponent';
+import NotFound from './pages/NotFound/NotFound.jsx';
+
+
 const isAuthenticated = () => {
   const currentUser = firebase.auth().currentUser;
   return currentUser !== null;
@@ -45,6 +47,7 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>} />
+          <Route path='/*' element={<NotFound/>} />
           <Route path='/about' element={<AboutUs/>} />
           <Route path='/service/:id' element={<Service/>}/>
           <Route path='/our-products/:section' element={<OurProducts/>}/>

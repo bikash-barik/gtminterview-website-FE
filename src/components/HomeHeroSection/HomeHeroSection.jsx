@@ -14,7 +14,6 @@ export default function HomeHeroSection() {
 
   return (
     <Box className='lay'>
-
             <div className='homediv'>
             <Box className='containerr'>
                 <div className='homecolumn1'>
