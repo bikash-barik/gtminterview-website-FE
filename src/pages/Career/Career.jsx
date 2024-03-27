@@ -3,9 +3,11 @@ import "./career.css";
 // import jobimg from "../../assets/images/business-development-manager-job-description-6000x4000-20201126-2048x2048.jpeg";
 import { FaChevronDown } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import { useParams } from "react-router-dom";
+import ApplicationForm from "../../components/ApplicationForm/ApplicationForm";
 // const jobsData = [
 //   {
 //     jobimage: jobimg,
@@ -109,9 +111,19 @@ const handleSectionClick = () => {
   setIsInternshipSelected(!isInternshipSelected);
 };
 
+const[model,setmodel]=useState(false);
 
+const openModel = ()=>{
+  setmodel(true);
+}
 
   return (
+    <>
+     <div className={model?"model open":"model"}>
+       <ApplicationForm/>
+      <button className='modelcloseButton' onClick={()=>{setmodel(false)}}><IoMdClose/></button>
+    </div>
+    
     <section className="careersection">
       <div className="careerrow1">
 
@@ -140,7 +152,7 @@ const handleSectionClick = () => {
               </div>
 
               <div className="careerinnercolumn3">
-                <button className="careerbtn">Apply Now</button>
+                <button className="careerbtn" onClick={openModel}>Apply Now</button>
               </div>
             </div>
 
@@ -178,5 +190,7 @@ const handleSectionClick = () => {
       }
       </div>
     </section>
+    </>
+    
   );
 }

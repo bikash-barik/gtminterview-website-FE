@@ -1,0 +1,25 @@
+.applicationformdiv{
+    height: 78vh;
+    width: 40vw;
+    /* overflow-y: scroll; */
+    background-color: white;
+    display: flex;
+    /* gap: 10px; */
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.applicationformdiv > input,label,select,option{
+    padding: 8px;
+    margin:10px;
+    width: 95%;
+}
+
+
+
+.applicationformdiv > label::after{
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
+
