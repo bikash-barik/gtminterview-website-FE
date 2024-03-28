@@ -24,6 +24,15 @@
 --e-global-typography-accent-font-weight: 500;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
 .lay {
   padding: 0;
 }
