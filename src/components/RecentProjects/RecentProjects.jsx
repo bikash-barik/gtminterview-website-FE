@@ -1,5 +1,7 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import './recentprojects.css';
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
 import gmtimg from '../../assets/images/gtm-1536x692.png';
 import apnaapp from '../../assets/images/aa-1536x729.png';
@@ -159,26 +161,52 @@ const RecentAIProjectData = [
 
 export default function RecentProjects() {
     const [data, setData] = useState(RecentAIProjectData);
+    const [AIData, setAIData] = useState({});
+    const [ProgrammingData, setProgrammingData] = useState({});
+    const [BlockChainData, setBlockChainData] = useState({});
     const [isAISelected, setIsAISelected] = useState(true);
     const [isBlockChainSelected, setBlockChainSelected] = useState(false);
     const [isProgrammingSelected, setProgrammingSelected] = useState(false);
 
+    useEffect(() => {
+      const firestore = firebase.firestore();
+      const contentDataRef = firestore.collection("RecentProjectData");
+      const unsubscribe = contentDataRef.onSnapshot((snapshot) => {
+        const newContentData = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log("Recent Projects Data",newContentData);
+    
+        const filteredAIData = newContentData.filter(data => data.recentprojectCategory === "AI");
+        setData(filteredAIData);
+        setAIData(filteredAIData);
+    
+        const filteredProgrammingData = newContentData.filter(data => data.recentprojectCategory === "Programming");
+        setProgrammingData(filteredProgrammingData);
+
+        const filteredBlockChainData = newContentData.filter(data => data.recentprojectCategory === "Programming");
+        setBlockChainData(filteredBlockChainData);
+    
+      });
+      return () => unsubscribe();
+    }, []);
     const handleAISectionClick = () => {
-      setData(RecentAIProjectData);
+      setData(AIData);
       setIsAISelected(!isAISelected);
       setBlockChainSelected(false);
       setProgrammingSelected(false);
     };
 
     const handleBlockChainSectionClick = () => {
-        setData(RecentBlockChainProjectData);
+        setData(BlockChainData);
         setIsAISelected(false);
         setBlockChainSelected(!isBlockChainSelected);
         setProgrammingSelected(false);
     };
       
     const handleProgrammingSectionClick = () => {
-        setData(RecentBlockChainProjectData);
+        setData(ProgrammingData);
         setIsAISelected(false);
         setBlockChainSelected(false);
         setProgrammingSelected(!isProgrammingSelected);
