@@ -185,7 +185,7 @@ export default function RecentProjects() {
         const filteredProgrammingData = newContentData.filter(data => data.recentprojectCategory === "Programming");
         setProgrammingData(filteredProgrammingData);
 
-        const filteredBlockChainData = newContentData.filter(data => data.recentprojectCategory === "Programming");
+        const filteredBlockChainData = newContentData.filter(data => data.recentprojectCategory === "BlockChain");
         setBlockChainData(filteredBlockChainData);
     
       });

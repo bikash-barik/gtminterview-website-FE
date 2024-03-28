@@ -12,6 +12,7 @@ import './header.css';
 import ServicesMegaMenu from '../ServicesMegaMenu/ServicesMegaMenu';
 import ProductMegaMenu from '../ProductMegamenu/ProductMegaMenu';
 import CareerMegaMenu from '../CareerMegaMenu/CareerMegaMenu';
+import LoginPopup from '../LoginPopup/LoginPopup';
 const Header = () => {
   const [open, setOpne] = useState(false);
 
@@ -31,6 +32,12 @@ const Header = () => {
     setIsCareerMenuOpen(!isCareerMenuOpen);
   }
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleClose = () => {
+    setIsVisible(!isVisible);
+  };
+
 
   return (
     <Box>
@@ -41,7 +48,13 @@ const Header = () => {
         <div className="headersecond">
         <div className='typho-1' ><HeadsetIcon /><a className='headerancher' href="tel:7978332292"> +91 7978332292</a></div>
         <div className='typho-1'><EmailIcon />info@glowtechmor.com</div>
-        <div className='typho-1'><Link to="https://crm.glowtechmor.com/"><AccountCircleIcon /></Link></div>
+        <div className='typho-1' style={{cursor:"pointer"}} onClick={handleClose}><AccountCircleIcon /></div>
+        {
+          isVisible && (
+            <LoginPopup handleClose={handleClose}/>
+          )
+        }
+       
         </div>
        
       </div>

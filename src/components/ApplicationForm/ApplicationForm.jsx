@@ -53,6 +53,16 @@ export default function ApplicationForm() {
             });
             if (response.status === 200) {
                 alert("Form submitted successfully!");
+                setFormData({
+                    email: "",
+                    Name: "",
+                    phoneNumber: "",
+                    address: "",
+                    experience: "",
+                    lastcompany: "",
+                    resume: null
+                });
+                
             } else {
                 throw new Error("Form submission failed!");
             }
