@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './contact.css';
 import Top from '../../components/Top/Top';
 import { FaFacebook } from "react-icons/fa";
@@ -6,7 +6,55 @@ import { FaTwitter } from "react-icons/fa";
 import { FaSkype } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
+import axios from 'axios';
+
 const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    email: "",
+    firstName: "",
+    lastName:"",
+    phoneNumber: "",
+    message: ""
+});
+
+const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+};
+
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+        const response = await axios.post("https://glowtechmor-backend.onrender.com/ContactUsForm", {
+            email: formData.email,
+            firstName: formData.firstName,
+            lastName:formData.lastName,
+            phoneNumber: formData.phoneNumber,
+            message:formData.message
+            }, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        if (response.status === 200) {
+            alert("Form submitted successfully!");
+            setFormData({
+                email: "",
+                firstName: "",
+                lastName:"",
+                phoneNumber: "",
+                message:" "
+            });
+            
+        } else {
+            throw new Error("Form submission failed!");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Form submission failed!");
+    }
+};
 
   return (
     <>
@@ -19,26 +67,26 @@ const Contact = () => {
           <h2 className='contactuscolumnheading'>GET IN TOUCH</h2>
 
           <div className="contactuscolumninnerdiv ">
-                <input type="text" className='contactusinput mr-3' placeholder='First Name'/>
-                <input type="text" className='contactusinput' placeholder='Last Name'/>
+                <input type="text" className='contactusinput mr-3' value={formData.firstName} onChange={handleInputChange} placeholder='First Name'/>
+                <input type="text" className='contactusinput' value={formData.lastName} onChange={handleInputChange} placeholder='Last Name'/>
           </div>
 
           <div className="contactuscolumninnerdiv1">
-                <input type="email" className='contactusinput mr-3' placeholder='Email'/>
+                <input type="email" className='contactusinput mr-3' value={formData.email} onChange={handleInputChange} placeholder='Email'/>
           </div>
 
           <div className="contactuscolumninnerdiv1">
-                <input type="text" className='contactusinput' placeholder='Contact Number'/>
+                <input type="text" className='contactusinput' value={formData.phoneNumber} onChange={handleInputChange} placeholder='Contact Number'/>
           </div>
 
           <div className="contactuscolumninnerdiv1">
-                <textarea name="" className='contactusinput' id="" cols="50" rows="10" placeholder='Message'>
+                <textarea name="" className='contactusinput' value={formData.message} onChange={handleInputChange} id="" cols="50" rows="10" placeholder='Message'>
                  
                 </textarea>
           </div>
 
           <div className="contactuscolumninnerdiv1">
-               <input type="submit" className='contactusinputbtn' placeholder='SEND MESSAGE'/>
+               <input type="submit" className='contactusinputbtn' onClick={handleSubmit} placeholder='SEND MESSAGE'/>
           </div>
 
         </div>
