@@ -114,13 +114,13 @@ const handleSectionClick = () => {
 const[model,setmodel]=useState(false);
 
 const openModel = ()=>{
-  setmodel(true);
+  setmodel(!model);
 }
 
   return (
     <>
      <div className={model?"model open":"model"}>
-       <ApplicationForm/>
+       <ApplicationForm openModel={openModel}/>
       <button className='modelcloseButton' onClick={()=>{setmodel(false)}}><IoMdClose/></button>
     </div>
     

@@ -5,7 +5,7 @@ import firebase1 from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
 
-export default function ApplicationForm() {
+export default function ApplicationForm({openModel}) {
     const [formData, setFormData] = useState({
         email: "",
         Name: "",
@@ -38,7 +38,7 @@ export default function ApplicationForm() {
 
         console.log(formData)
         try {
-            const response = await axios.post("http://localhost:5500/ApplicationForm", {
+            const response = await axios.post("https://glowtechmor-backend.onrender.com/ApplicationForm", {
                 email: formData.email,
                 Name: formData.Name,
                 phoneNumber: formData.phoneNumber,
@@ -53,6 +53,7 @@ export default function ApplicationForm() {
             });
             if (response.status === 200) {
                 alert("Form submitted successfully!");
+                openModel();
                 setFormData({
                     email: "",
                     Name: "",
