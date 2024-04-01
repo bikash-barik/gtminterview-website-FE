@@ -237,7 +237,7 @@ export default function RecentProjects() {
         </div>
 
         <div  className={` ${isProgrammingSelected ? 'careercolumn1 ' : 'careercolumn2'}`} onClick={handleProgrammingSectionClick}>
-          <p className="careercolumnpara">Programming & Tech</p>
+          <p className="careercolumnpara">Programming</p>
         </div>
         
       </div>

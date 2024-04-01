@@ -182,7 +182,7 @@
 
 @media screen and (max-width:600px) {
     .careerrow1{
-        width: 90%;
+        width: 95%;
     }
 
     .careerrow2innerrow1{
@@ -191,6 +191,10 @@
 
     .careerinnercolumn1,.careerinnercolumn2,.careerinnercolumn3{
         width: 100%;
+    }
+
+    .careerinnercolumn3{
+        justify-content: flex-start;
     }
 
     .careerinnercolumn2{

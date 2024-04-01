@@ -29,16 +29,16 @@ export default function Login () {
 
   return (
    <section className='signupsection md:mt-28 md:pt-0 pt-24'>
-      <div className="signupdiv">
+      <form className="signupdiv">
         <h1 className='signupheading'>Login</h1>
         <input className='signupinput' type="email"  placeholder='Enter Email...' name='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
         <input className='signupinput' type="password"  placeholder='Enter Password...' value={password} onChange={(e) => setPassword(e.target.value)}/>
         <p className='signuppara'>Forget Password?</p>
-        <button className='signupbtn' onClick={handleLogin}>Login</button>
+        <button className='signupbtn' type='submit' onClick={handleLogin}>Login</button>
         <p className='signuppara text-right text-black'> 
         <Link to="/signup" className='text-blue-600'>Create New Account..</Link></p>
         {error && <p style={{ color: 'red' }}>{error}</p>}
-      </div>
+      </form>
    </section>
 
   )

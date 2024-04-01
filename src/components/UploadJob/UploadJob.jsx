@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import firebase1 from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
+import openingpositionimage from '../../assets/images/openingpositionimage.png';
 
 export default function Uploadopeningposition({ setLoadingState,setLoadingMessage }) {
  
@@ -136,7 +137,7 @@ export default function Uploadopeningposition({ setLoadingState,setLoadingMessag
     </div>
 
     <div className="uploadimagecolumn">
-      <img className="uploadimageimage" src="/" alt="openingpositionimage"></img>
+      <img className="uploadimageimage" src={openingpositionimage} alt="openingpositionimage"></img>
     </div>
 
   </div>

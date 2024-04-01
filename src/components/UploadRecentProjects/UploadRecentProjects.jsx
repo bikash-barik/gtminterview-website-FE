@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import firebase1 from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
+import recentprojectimage from '../../assets/images/recentprojectimage.png';
 
 export default function UploadRecentProjects({ setLoadingState,setLoadingMessage }) {
  
@@ -107,7 +108,7 @@ export default function UploadRecentProjects({ setLoadingState,setLoadingMessage
     </div>
 
     <div className="uploadimagecolumn">
-      <img className="uploadimageimage" src="/" alt="openingpositionimage"></img>
+      <img className="uploadimageimage" src={recentprojectimage} alt="recentprojectimage"></img>
     </div>
 
   </div>

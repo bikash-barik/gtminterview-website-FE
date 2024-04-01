@@ -120,7 +120,7 @@ const openModel = ()=>{
   return (
     <>
      <div className={model?"model open":"model"}>
-       <ApplicationForm openModel={openModel}/>
+      <ApplicationForm openModel={openModel}/>
       <button className='modelcloseButton' onClick={()=>{setmodel(false)}}><IoMdClose/></button>
     </div>
     

@@ -7,8 +7,11 @@ import { FaSkype } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import axios from 'axios';
+import Loader from "../../components/Loader/Loader";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(null);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -25,6 +28,8 @@ const handleInputChange = (e) => {
 
 const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setMessage({text:"Please wait until your data is submitted!..."});
     try {
         const response = await axios.post("https://glowtechmor-backend.onrender.com/ContactUsForm", {
             email: formData.email,
@@ -38,7 +43,7 @@ const handleSubmit = async (e) => {
             }
         });
         if (response.status === 200) {
-            alert("Form submitted successfully!");
+            // alert("Form submitted successfully!");
             setFormData({
                 email: "",
                 firstName: "",
@@ -46,18 +51,39 @@ const handleSubmit = async (e) => {
                 phoneNumber: "",
                 message:" "
             });
+            setMessage({ type: 'success', text: 'Data submitted successfully!' });
+            setTimeout(() => {
+              setLoading(false);
+            }, 5000);
             
         } else {
             throw new Error("Form submission failed!");
         }
     } catch (error) {
-        console.error("Error:", error);
-        alert("Form submission failed!");
+      setMessage({ type: 'error', text: error});
+      setTimeout(() => {
+       setLoading(false);
+     }, 5000);
     }
 };
 
   return (
     <>
+     {
+        loading ?
+        <section className="loadingimagediv">
+        <div className="loadingimageinnerdiv">
+        <div className="loadingimageimagediv">
+         <Loader/>
+        </div>
+        <div className="loadingimagemessage">
+          <h2 className="text-4xl" style={{ color: message.type === 'success' ? 'green' : message.type === 'error' ? 'red' :'yellow'}}>{message.text}</h2>
+          </div>
+        </div>
+        </section>
+      :
+      <>
+
     <Top heading={"CONTACT US"}/>
 
     <section className='contactussection pt-32'>
@@ -161,6 +187,8 @@ const handleSubmit = async (e) => {
       </div>
     </section>
     <iframe title='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5544322883056!2d77.6084230751526!3d12.936334215650353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae153a4579f8e5%3A0xe03c80840fd742d7!2sWeWork%20Prestige%20Cube!5e0!3m2!1sen!2sin!4v1709284752423!5m2!1sen!2sin" width="100%" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </>
+     }
     </>
   );
 };

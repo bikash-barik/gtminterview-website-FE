@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import firebase1 from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
+import servicesimage from '../../assets/images/servicesimage.png';
 
 export default function UploadServices({ setLoadingState,setLoadingMessage }) {
  
@@ -170,7 +171,7 @@ export default function UploadServices({ setLoadingState,setLoadingMessage }) {
     </div>
 
     <div className="uploadimagecolumn">
-      <img className="uploadimageimage" src="/" alt="serviceimage"></img>
+      <img className="uploadimageimage" src={servicesimage} alt="servicesimage"></img>
     </div>
 
   </div>

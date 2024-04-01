@@ -8,8 +8,7 @@ import UploadServices from "../../components/UploadServices/UploadServices";
 import UploadJob from "../../components/UploadJob/UploadJob";
 import UploadEmployeeData from "../../components/UploadEmployeeData/UploadEmployeeData";
 import UploadRecentProjects from "../../components/UploadRecentProjects/UploadRecentProjects";
-// import loadingImage from '../assets/hotelbookingreloader.gif';
-// import prasadamgalleryimage from '../assets/prasadamgalleryimage.png';
+import Loader from "../../components/Loader/Loader";
 
 
 const UploadData = () => {
@@ -44,7 +43,7 @@ const UploadData = () => {
       <section className="loadingimagediv">
         <div className="loadingimageinnerdiv">
         <div className="loadingimageimagediv">
-        <img className="loadingimage" src="/" alt="Loading"/>
+         <Loader/>
         </div>
         <div className="loadingimagemessage">
           <h2 className="text-4xl" style={{ color: message.type === 'success' ? 'green' : message.type === 'error' ? 'red' :'yellow'}}>{message.text}</h2>

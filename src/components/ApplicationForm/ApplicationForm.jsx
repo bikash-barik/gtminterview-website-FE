@@ -4,8 +4,12 @@ import axios from 'axios';
 import firebase1 from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
+import Loader from "../../components/Loader/Loader";
 
 export default function ApplicationForm({openModel}) {
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState(null);
+
     const [formData, setFormData] = useState({
         email: "",
         Name: "",
@@ -27,6 +31,11 @@ export default function ApplicationForm({openModel}) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        setLoading(true);
+        setMessage({text:"Please wait until your data is submitted!..."});
+
+
           const firestore = firebase1.firestore();
           const storage = firebase1.storage();
           
@@ -52,7 +61,7 @@ export default function ApplicationForm({openModel}) {
                 }
             });
             if (response.status === 200) {
-                alert("Form submitted successfully!");
+                // alert("Form submitted successfully!");
                 openModel();
                 setFormData({
                     email: "",
@@ -63,31 +72,56 @@ export default function ApplicationForm({openModel}) {
                     lastcompany: "",
                     resume: null
                 });
+
+                setMessage({ type: 'success', text: 'Data submitted successfully!' });
+                setTimeout(() => {
+                  setLoading(false);
+                }, 5000);
                 
             } else {
                 throw new Error("Form submission failed!");
             }
         } catch (error) {
-            console.error("Error:", error);
-            alert("Form submission failed!");
+            setMessage({ type: 'error', text: error});
+            setTimeout(() => {
+             setLoading(false);
+           }, 5000);
         }
     };
 
 
   return (
-    <div className='applicationformdiv'>
-        <input type="email" name="email" placeholder='Email' value={formData.email} onChange={handleInputChange} required />
-        <input type="text" name="Name" placeholder='Name' value={formData.Name} onChange={handleInputChange} required />
-        <input type="text" name="phoneNumber" placeholder='Phone Number' value={formData.phoneNumber} onChange={handleInputChange} required />
-        <input type="text" name="address" placeholder='Address' value={formData.address} onChange={handleInputChange} required />
-        <input type="number" name="experience" placeholder='Years of Experience' value={formData.experience} onChange={handleInputChange} required />
-        <input type="text" name="lastcompany" placeholder='Last Company' value={formData.lastcompany} onChange={handleInputChange} required />
-        <div className="uploadimageinputdiv">
-          <label htmlFor="resume">Resume/CV</label>
-          <input type="file" onChange={handleFileChange} required />
+    <>
+    {
+        loading ?
+        <section className="loadingimagediv">
+        <div className="loadingimageinnerdiv">
+        <div className="loadingimageimagediv">
+         <Loader/>
         </div>
-        <input onClick={handleSubmit} type="submit" value="SUBMIT" style={{backgroundColor:"#002244",color:"white",border:"none"}} />
+        <div className="loadingimagemessage">
+          <h2 className="text-4xl" style={{ color: message.type === 'success' ? 'green' : message.type === 'error' ? 'red' :'yellow'}}>{message.text}</h2>
+          </div>
+        </div>
+        </section>
+      :
+
+    <div className='applicationformdiv'>
+      <input type="email" name="email" placeholder='Email' value={formData.email} onChange={handleInputChange} required />
+      <input type="text" name="Name" placeholder='Name' value={formData.Name} onChange={handleInputChange} required />
+      <input type="text" name="phoneNumber" placeholder='Phone Number' value={formData.phoneNumber} onChange={handleInputChange} required />
+      <input type="text" name="address" placeholder='Address' value={formData.address} onChange={handleInputChange} required />
+      <input type="number" name="experience" placeholder='Years of Experience' value={formData.experience} onChange={handleInputChange} required />
+      <input type="text" name="lastcompany" placeholder='Last Company' value={formData.lastcompany} onChange={handleInputChange} required />
+    <div className="uploadimageinputdiv">
+        <label htmlFor="resume">Resume/CV</label>
+        <input type="file" onChange={handleFileChange} required />
     </div>
+      <input onClick={handleSubmit} type="submit" value="SUBMIT" style={{backgroundColor:"#002244",color:"white",border:"none"}} />
+    </div>
+
+    }
+  </>
   );
 }
 
