@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from "react";
 import "./career.css";
-// import jobimg from "../../assets/images/business-development-manager-job-description-6000x4000-20201126-2048x2048.jpeg";
 import { FaChevronDown } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
@@ -8,48 +7,6 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import { useParams } from "react-router-dom";
 import ApplicationForm from "../../components/ApplicationForm/ApplicationForm";
-// const jobsData = [
-//   {
-//     jobimage: jobimg,
-//     jobtitle: "Business Development Manager",
-//     jobdescription: "Looking for Business Development Manager",
-//   },
-//   {
-//     jobimage: jobimg,
-//     jobtitle: "User Interface (UI) Designer",
-//     jobdescription: "Looking for User Interface (UI) Designer",
-//   },
-//   {
-//     jobimage: jobimg,
-//     jobtitle: "React Native developer",
-//     jobdescription: "Looking for React Native developer",
-//   },
-//   {
-//     jobimage: jobimg,
-//     jobtitle: "Flutter Developer",
-//     jobdescription: "Looking for Flutter Developer",
-//   },
-//   {
-//     jobimage: jobimg,
-//     jobtitle: "MERN(Mongodb Express ReactJs NodeJs ) stack developers",
-//     jobdescription:"Looking for MERN(Mongodb Express ReactJs NodeJs ) stack developers",
-//   },
-// ];
-
-// const internshipsData = [
-//   {
-//     jobimage: jobimg,
-//     jobtitle: "Business Development Manager Intern",
-//     jobdescription: "Looking for Business Development Manager Intern",
-//   },
-//   {
-//     jobimage: jobimg,
-//     jobtitle: "User Interface (UI) Designer Intern",
-//     jobdescription: "Looking for User Interface (UI) Designer Intern",
-//   },
-// ];
-
-
 
 export default function Career() {
   const {opening} = useParams();
@@ -98,13 +55,11 @@ useEffect(() => {
     
     if(opening === "internship"){
       setopeningPositionsData(filteredInternshipData);
-      setIsInternshipSelected(!isInternshipSelected);
+      setIsInternshipSelected(true);
     }
-   
-
   });
   return () => unsubscribe();
-}, [isInternshipSelected,opening]);
+}, []);
 
 const handleSectionClick = () => {
   setopeningPositionsData(isInternshipSelected ? jobOpeningsData : internshipOpeningsData)

@@ -12,7 +12,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import company1 from '../../assets/images/company1.svg';
 import company2 from '../../assets/images/company2.png';
 import company3 from '../../assets/images/company3.png';
-import googleplay from '../../assets/images/googleplay.png';
+import googleplay from '../../assets/images/playstore (2).png';
 import appstore from '../../assets/images/appstore.png';
 
 import './footer.css';
