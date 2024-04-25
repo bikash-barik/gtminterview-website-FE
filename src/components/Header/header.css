@@ -104,7 +104,7 @@
 
 @media screen and (max-width:600px) {
     .header{
-        padding:12px;
+        padding:12px 5px;
         /* gap: 15px; */
         flex-direction: column-reverse;
     }
@@ -120,6 +120,10 @@
         font-weight: 500;
         font-size: 12px;
         /* width: 100%; */
+    }
+
+    .headersecond .typho-1:last-child{
+        justify-content: flex-end !important;
     }
 
     .hamburger{

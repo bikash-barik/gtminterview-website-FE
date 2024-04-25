@@ -36,7 +36,7 @@ export default function OnDemandService() {
         <Typography className="on">On-Demand Services</Typography>
       </div>
       <div className="servicediv">
-      <div className="box" data-aos="zoom-in-up">
+      <div className="box" data-aos="zoom-in-up" >
         {card.map((e) => (
           <div
             key={e.id}

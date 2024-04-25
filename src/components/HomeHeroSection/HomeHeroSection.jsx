@@ -3,6 +3,7 @@ import { Box, Button,Typography } from '@mui/material';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 // import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { FaAngleDoubleRight } from "react-icons/fa";
+import heroimage from '../../assets/images/dribbble-animation-1.gif';
 
 export default function HomeHeroSection() {
     const [typeEffect] = useTypewriter({
@@ -25,7 +26,7 @@ export default function HomeHeroSection() {
                 </div>
                
                 <div className='homecolumn2'>
-                    <img style={{ height: "384px",width:"100%", marginTop: "18px" }} src="https://glowtechmor.com/wp-content/uploads/2022/12/dribbble-animation-1.gif" alt='logo' />
+                    <img style={{ height: "384px",width:"100%", marginTop: "18px" }} src={heroimage} alt='logo' />
                 </div>
             </Box>
             </div>
