@@ -15,11 +15,15 @@
     width: 95%;
 }
 
-
-
 .applicationformdiv > label::after{
     content: "*";
     color: red;
     margin-left: 5px;
+}
+@media screen and (max-width:600px) {
+    .applicationformdiv{
+        height: 85vh;
+        width: 95vw;
+    }
 }
 
