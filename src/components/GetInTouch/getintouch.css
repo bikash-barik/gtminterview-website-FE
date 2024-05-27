@@ -1,82 +1,96 @@
 .form-d {
-    margin-top: 19px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0;
+  margin-top: 19px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
 }
 
 
 .form-d h2 {
-    text-align: center;
-    display: inline-block;
-    margin-bottom: 30px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 30px;
 }
-  
+
 
 .flex-form {
-    display: flex;
-    gap: 100px;
-    margin-top: 50px;
-    padding: 80px;
-    width: 85%;
-    background: linear-gradient(359deg, #fff, skyblue);
+  display: flex;
+  gap: 100px;
+  margin-top: 50px;
+  padding: 80px;
+  width: 85%;
+  background: linear-gradient(359deg, #fff, skyblue);
 }
 
 
-.formm{
-    width: 50%;      
+.formm {
+  width: 50%;
 }
 
-.boxes{
-    width: 50%;
-    display: flex;
+.boxes {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add {
+  display: flex;
+  gap: 10px;
+}
+
+.fast-box {
+  padding: 20px 20px 20px 20px;
+  background-color: #FFFFFF;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
+  gap: 10px;
+  width: 373px;
+}
+
+.second-box {
+  width: 373px;
+  padding: 20px 20px 20px 20px;
+  background-color: #FFFFFF;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.messagepara {
+  text-align: center;
+}
+
+@media screen and (max-width:768px) {
+  .flex-form{
+    gap: 30px;
+    padding: 20px;
+    width: 97%;
+  }
+}
+@media screen and (max-width:600px) {
+  .flex-form {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 50px;
+    width: 90%;
+  }
+
+  .flex-form {
+    padding: 20px;
+  }
+
+  .formm,
+  .boxes {
+    width: 100%;
+  }
+
+  .fast-box,
+  .second-box {
+    width: 100%;
+  }
 }
-
-  .add{
-    display: flex;
-    gap: 10px;
-  }
-
-  .fast-box{
-    padding: 20px 20px 20px 20px;
-    background-color: #FFFFFF;
-    border-radius: 9px 9px 9px 9px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
-    gap: 10px;
-    width: 373px;
-  }
-  .second-box{
-    width: 373px;
-    padding: 20px 20px 20px 20px;
-    background-color: #FFFFFF;
-    border-radius: 9px 9px 9px 9px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.22);
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  @media screen and (max-width:600px) {
-    .flex-form{
-        flex-direction: column;
-        gap: 50px;
-        width: 90%;
-    }
-
-    .flex-form {
-      padding: 20px;
-    }
-
-    .formm,.boxes{
-        width: 100%;
-    }
-
-    .fast-box,.second-box{
-        width: 100%;
-    }
-  }

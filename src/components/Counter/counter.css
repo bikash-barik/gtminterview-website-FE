@@ -22,6 +22,12 @@
     font-size: 3rem;
 }
 
+@media screen and (max-width:768px) {
+    .counterrow{
+        width: 95%;
+    }
+}
+
 @media screen and (max-width:600px) {
     .countercolumn{
         grid-column: span 4;

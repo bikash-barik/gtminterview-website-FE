@@ -173,6 +173,21 @@ a:hover{
 }
 /* commerce css end */
 
+@media screen and (max-width:768px) {
+  .container-2 {
+    width: 95%;
+    flex-direction: column;
+  }
+  
+  .c-left{
+    width: 100%;
+  }
+  
+  .c-right{
+    width: 100%;
+  }
+  
+}
 
 
 @media screen and (max-width:600px) {

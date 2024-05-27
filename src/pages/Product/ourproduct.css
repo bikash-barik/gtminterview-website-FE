@@ -63,6 +63,7 @@
         flex-direction: column;
         width: 90%;
         padding: 20px;
+        gap: 40px;
     }
 
     .opcolumn1,.opcolumn2{

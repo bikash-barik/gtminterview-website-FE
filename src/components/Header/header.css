@@ -75,10 +75,10 @@
 }
 
 .headersecond{
-    width: 40%;
+    width: 35%;
     display: flex;
     gap: 30px;
-    /* justify-content: flex-end; */
+    justify-content: center;
     padding: 0 10px;
 }
 
@@ -102,7 +102,7 @@
   }
   
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     .header{
         padding:12px 5px;
         /* gap: 15px; */
@@ -135,7 +135,9 @@
     }
 
     .headersecond{
+        width: 100%;
         gap: 15px;
+        justify-content: space-around;
         padding: 0;
     }
 

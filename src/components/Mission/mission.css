@@ -74,6 +74,25 @@
     padding: 40px 0;
 }
 
+@media screen and (max-width:768px) {
+    .missionrow2{
+        width: 95%;
+    }
+    
+    .missionrow3{
+        flex-direction: column;
+    }
+
+    .missioninnerrow{
+        height: 100px;
+    }
+
+    .missioninnerrow {
+        height: 200px;
+    }
+
+    
+}
 
 
 @media screen and (max-width:600px) {

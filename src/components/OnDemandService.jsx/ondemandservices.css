@@ -8,6 +8,7 @@
 
 .servicediv {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 30px;
 }
@@ -79,6 +80,17 @@
 .card-back p {
     margin: 0;
     text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .servicediv{
+        width: 100%;
+    }
+    
+    .box-content {
+        width: 45%;
+    }
+    
 }
 
 @media screen and (max-width:600px) {

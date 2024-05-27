@@ -41,6 +41,7 @@
 .contactuscolumninnerdiv1{
     margin-top: 15px;
     width: 100%;
+    text-align: center;
 }
 
 .contactusinput{
@@ -58,6 +59,7 @@ border: 1px solid #ccc;
     color: white;
     font-weight: 600;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .contactcolumn2heading{
@@ -132,7 +134,7 @@ border: 1px solid #ccc;
 }
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     .contactusrow{
         flex-direction: column;
         width: 95%;
@@ -140,8 +142,14 @@ border: 1px solid #ccc;
 
     .contactuscolumn1,.contactuscolumn2{
         width: 100%;
-        padding: 8px;
+        padding: 30px;
     }
 
+}
+
+@media screen and (max-width:600px) {
+    .contactuscolumn1,.contactuscolumn2{
+        padding: 8px;
+    }
 }
 

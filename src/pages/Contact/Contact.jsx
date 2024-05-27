@@ -6,12 +6,12 @@ import { FaTwitter } from "react-icons/fa";
 import { FaSkype } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
-import axios from 'axios';
-import Loader from "../../components/Loader/Loader";
+import ContactForm from '../../Utils/ContactForm';
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState(null);
+  const [loadingMessage, setLoadingMessage] = useState(null);
+  const [errors, setErrors] = useState({});
 
   const [formData, setFormData] = useState({
     email: "",
@@ -26,64 +26,70 @@ const handleInputChange = (e) => {
     setFormData({ ...formData, [name]: value });
 };
 
-const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setMessage({text:"Please wait until your data is submitted!..."});
-    try {
-        const response = await axios.post("https://glowtechmor-backend.onrender.com/ContactUsForm", {
-            email: formData.email,
-            firstName: formData.firstName,
-            lastName:formData.lastName,
-            phoneNumber: formData.phoneNumber,
-            message:formData.message
-            }, {
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-        if (response.status === 200) {
-            // alert("Form submitted successfully!");
-            setFormData({
-                email: "",
-                firstName: "",
-                lastName:"",
-                phoneNumber: "",
-                message:" "
-            });
-            setMessage({ type: 'success', text: 'Data submitted successfully!' });
-            setTimeout(() => {
-              setLoading(false);
-            }, 5000);
-            
-        } else {
-            throw new Error("Form submission failed!");
-        }
-    } catch (error) {
-      setMessage({ type: 'error', text: error});
-      setTimeout(() => {
-       setLoading(false);
-     }, 5000);
-    }
+const validation = () => {
+  const newErrors = {};
+  const emailPattern = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
+  const phonePattern = /^[\d+\-\s()]*$/;
+
+
+  if (!formData.firstName) {
+    newErrors.firstName = 'First Name is required';
+  }
+
+  if (!formData.lastName) {
+    newErrors.lastName = 'Last Name is required';
+  }
+
+  if (!formData.phoneNumber) {
+    newErrors.phoneNumber = 'Mobile Number is required';
+  } else if (!phonePattern.test(formData.phoneNumber)) {
+    newErrors.phoneNumber = 'Please enter correct Mobile Number';
+  }
+
+  if (!formData.email) {
+    newErrors.email = 'Email is required';
+  } else if (!emailPattern.test(formData.email)) {
+    newErrors.email = 'Please enter correct Email ID';
+  }
+
+  if (!formData.message) {
+    newErrors.message = 'Message is required';
+  }
+
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0;
 };
+
+const submitContactUsForm = async (e) =>{
+  e.preventDefault();
+
+  if(validation()){
+      setLoading(true);
+      setLoadingMessage({ type: 'wait', text:"Wait Until Your Data is Submitted!..."});
+
+      const {type,text,loading} = await ContactForm(formData);
+
+      setLoadingMessage({ type: type, text: text });
+      setTimeout(() => {
+        setLoading(loading);
+      }, 5000);
+
+      setFormData({
+        email: "",
+        firstName: "",
+        lastName:"",
+        phoneNumber: "",
+        message: ""
+    });
+  }
+  else{
+    window.location.reload()
+  }
+}
+
 
   return (
     <>
-     {
-        loading ?
-        <section className="loadingimagediv">
-        <div className="loadingimageinnerdiv">
-        <div className="loadingimageimagediv">
-         <Loader/>
-        </div>
-        <div className="loadingimagemessage">
-          <h2 className="text-4xl" style={{ color: message.type === 'success' ? 'green' : message.type === 'error' ? 'red' :'yellow'}}>{message.text}</h2>
-          </div>
-        </div>
-        </section>
-      :
-      <>
-
     <Top heading={"CONTACT US"}/>
 
     <section className='contactussection pt-32'>
@@ -93,27 +99,34 @@ const handleSubmit = async (e) => {
           <h2 className='contactuscolumnheading'>GET IN TOUCH</h2>
 
           <div className="contactuscolumninnerdiv ">
-                <input type="text" className='contactusinput mr-3' value={formData.firstName} onChange={handleInputChange} placeholder='First Name'/>
-                <input type="text" className='contactusinput' value={formData.lastName} onChange={handleInputChange} placeholder='Last Name'/>
+                <input type="text" className='contactusinput mr-3' name='firstName' value={formData.firstName} onChange={handleInputChange} placeholder='First Name'/>
+                <input type="text" className='contactusinput' name='lastName' value={formData.lastName} onChange={handleInputChange} placeholder='Last Name'/>
           </div>
 
           <div className="contactuscolumninnerdiv1">
-                <input type="email" className='contactusinput mr-3' value={formData.email} onChange={handleInputChange} placeholder='Email'/>
+                <input type="email" className='contactusinput mr-3' name='email' value={formData.email} onChange={handleInputChange} placeholder='Email'/>
           </div>
 
           <div className="contactuscolumninnerdiv1">
-                <input type="text" className='contactusinput' value={formData.phoneNumber} onChange={handleInputChange} placeholder='Contact Number'/>
+                <input type="text" className='contactusinput' name='phoneNumber' value={formData.phoneNumber} onChange={handleInputChange} placeholder='Contact Number'/>
           </div>
 
           <div className="contactuscolumninnerdiv1">
-                <textarea name="" className='contactusinput' value={formData.message} onChange={handleInputChange} id="" cols="50" rows="10" placeholder='Message'>
-                 
+                <textarea className='contactusinput' name="message" value={formData.message} onChange={handleInputChange} cols="50" rows="10" placeholder='Message'>
                 </textarea>
           </div>
 
           <div className="contactuscolumninnerdiv1">
-               <input type="submit" className='contactusinputbtn' onClick={handleSubmit} placeholder='SEND MESSAGE'/>
+                {
+                  loading ? 
+                  <p style={{ color: loadingMessage.type === 'success' ? 'green' : loadingMessage.type === 'error' ? 'red' : 'Tangaroa'}}>{loadingMessage.text}</p>
+                  :
+                  <input type="submit" className='contactusinputbtn' onClick={submitContactUsForm} placeholder='SEND MESSAGE'/>
+                }
+               
           </div>
+
+
 
         </div>
 
@@ -187,8 +200,6 @@ const handleSubmit = async (e) => {
       </div>
     </section>
     <iframe title='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5544322883056!2d77.6084230751526!3d12.936334215650353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae153a4579f8e5%3A0xe03c80840fd742d7!2sWeWork%20Prestige%20Cube!5e0!3m2!1sen!2sin!4v1709284752423!5m2!1sen!2sin" width="100%" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </>
-     }
     </>
   );
 };

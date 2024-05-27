@@ -20,7 +20,5 @@ const storage = getStorage(app);
 const auth = getAuth(app);
 setPersistence(auth, browserLocalPersistence);
 
-export { db };
-export { storage, auth};
-// export default app;
+export { storage, auth,db};
 export default firebaseConfig;

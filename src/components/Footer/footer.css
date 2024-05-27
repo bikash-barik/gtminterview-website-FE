@@ -43,7 +43,7 @@
     height: 50px;
   }
   
-  @media screen and (max-width:600px) {
+  @media screen and (max-width:768px) {
     .second-footer{
       flex-direction: column;
       padding: 10px;

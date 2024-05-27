@@ -180,6 +180,12 @@
     border: none;
 }
 
+@media screen and (max-width:768px) {
+    .careerrow1,.careerrow2{
+        width: 95%;
+    }
+}
+
 @media screen and (max-width:600px) {
     .careerrow1{
         width: 95%;
