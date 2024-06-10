@@ -47,7 +47,7 @@ const Header = () => {
         </div>
         
         <div className="headersecond">
-        <div className='typho-1' ><HeadsetIcon /><a className='headerancher' href="tel:7978332292"> +91 7978332292</a></div>
+        <div className='typho-1' ><HeadsetIcon /><a className='headerancher' href="tel:7978332292"> +91 6371083736</a></div>
         <div className='typho-1'><EmailIcon />info@glowtechmor.com</div>
         <div className='typho-1' style={{cursor:"pointer"}} onClick={handleClose}><AccountCircleIcon /></div>
         {
@@ -72,7 +72,7 @@ const Header = () => {
             <Link to='/' className="nav-link link" onClick={() => setOpne(false)} > HOME</Link>
             </li>
             <li className="nav-item">
-            <Link to='/about' className="nav-link link" onClick={() => setOpne(false)} > ABOUT US</Link>
+            <Link to='/about-us' className="nav-link link" onClick={() => setOpne(false)} > ABOUT US</Link>
             </li>
             <li className="nav-item servicenavitem" onClick={toggleServiceMenu}>
               <Link className="nav-link link">SERVICES<KeyboardArrowDownIcon/></Link>

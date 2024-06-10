@@ -135,7 +135,7 @@ const submitContactUsForm = async (e) =>{
                         </div>
                         <div className='second-box' data-aos="fade-up">
                             <Typography className='add'><PhoneIcon style={{ color: "red" }} />Phone</Typography>
-                            <p style={{ color: "#ccc" }}>+91 9064370711</p>
+                            <p style={{ color: "#ccc" }}>+91 6371083736</p>
                         </div>
                     </div>
 

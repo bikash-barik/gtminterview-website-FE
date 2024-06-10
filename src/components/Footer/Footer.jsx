@@ -31,7 +31,7 @@ const Footer = () => {
                     </Grid>
                     <Grid item xs={12} sm={6} md={4} lg={3}>
                         <Typography className='g-f'><EmailIcon /> info@glowtechmor.com </Typography>
-                        <Typography className='g-f'><PhoneIcon />+91 7978332292</Typography>
+                        <Typography className='g-f'><PhoneIcon />+91 6371083736</Typography>
                     </Grid>
                     <Grid className='icon-section' item xs={12} sm={6} md={4} lg={3}>
                         <FacebookIcon className='icon' />

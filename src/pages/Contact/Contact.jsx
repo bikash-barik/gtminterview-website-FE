@@ -151,7 +151,7 @@ const submitContactUsForm = async (e) =>{
             </div>
 
             <div className="contactdetailsheading">
-                <p className='contactdetailspara'>+91 9064370711</p>
+                <p className='contactdetailspara'>+91 6371083736</p>
             </div>
           </div>
 

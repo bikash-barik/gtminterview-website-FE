@@ -48,7 +48,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/*' element={<NotFound/>} />
-          <Route path='/about' element={<AboutUs/>} />
+          <Route path='/about-us' element={<AboutUs/>} />
           <Route path='/service/:id' element={<Service/>}/>
           <Route path='/our-products/:section' element={<OurProducts/>}/>
           <Route path='/contact' element={<Contact/>}/>
@@ -57,7 +57,7 @@ function App() {
           <Route path='/verify-certificate' element={<VerifyCertificate/>}/>
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/certi' element={<Certificate/>}/>
+          <Route path='/certificate' element={<Certificate/>}/>
           <Route path='/upload' element={<ProtectedRoute element={<UploadData/>} />}/>
 
         </Routes>
